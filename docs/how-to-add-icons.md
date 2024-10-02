@@ -1,7 +1,5 @@
 # How to add icons
 
-Only the icons listed on the [Fundamentals icons page on Figma](https://www.figma.com/file/Svp4Vqs9rU5iJViXL3ARfC/%5BDS%5D-Fundamentals-v0.1.0?type=design&node-id=531-18455&mode=design&t=MgCSr7PQmkzf1ixV-0) can be added.
-
 ## Add custom SVG icons
 
 1. Verify the name of your `.svg` file. It should reflect the expected component name.
