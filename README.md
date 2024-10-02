@@ -1,6 +1,6 @@
 # design-system
 
-> Component library for the Bio4C Design System
+> Component library for the Design System
 
 ## Local development
 
