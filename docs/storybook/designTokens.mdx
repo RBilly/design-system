@@ -153,9 +153,7 @@ The following schema shows the level of isolation of each type of tokens and the
 />
 
 <div className={[style.admonition, style.warning].join(' ')}>
-  **⚠️** Component-specific tokens are not used in the Bio4C Design System. See
-  [SBB](https://wiki.merckgroup.com/confluence/display/PAD/SBB+-+Design+tokens#SBBDesigntokens-Whataboutcomponent-specifictokens?)
-  to find out more.
+  **⚠️** Component-specific tokens are not used in the Design System.
 </div>
 
 
@@ -220,7 +218,7 @@ Developers only needs to follow guidelines to know which token to use for which 
 In SCSS, the token name needs to be prefixed by `$` to be used.
 
 <Source dark language="css" code={`
-@use '@bio4c/ui-kit/designTokens';
+@use 'ui-kit/designTokens';
 
 p {
   color: designTokens.$colorNeutral10;
@@ -230,7 +228,7 @@ p {
 ### JavaScript
 
 <Source dark language="js" code={`
-import { designTokens } from '@bio4c/ui-kit';
+import { designTokens } from 'ui-kit';
 
 const paragraphStyles = {
   color: designTokens.colorNeutral10
@@ -342,9 +340,3 @@ const paragraphStyles = {
 
 * <LinkTo kind="Fundamentals/Colors" story="docs">Fundamentals / Colors</LinkTo>
 * <LinkTo kind="Fundamentals/Typography" story="docs">Fundamentals / Typography</LinkTo>
-* [[Confluence] Bio4C Design System / SBB - Design tokens](https://wiki.merckgroup.com/confluence/display/PAD/SBB+-+Design+tokens)
-* [[Figma] Bio4C Design System / Fundamentals / Colors](https://www.figma.com/file/Svp4Vqs9rU5iJViXL3ARfC/%5BDS%5D-Fundamentals-v0.1.0?type=design&node-id=346-18399&mode=design&t=lBSvA8lHo9TsGdBn-0)
-* [[Figma] Bio4C Design System / Fundamentals / Typography](https://www.figma.com/file/Svp4Vqs9rU5iJViXL3ARfC/%5BDS%5D-Fundamentals-v0.1.0?type=design&node-id=825-16136&mode=design&t=jqOuhF1N6LV984M4-0)
-* [[Figma] Bio4C Design System / Fundamentals / Spacing](https://www.figma.com/file/Svp4Vqs9rU5iJViXL3ARfC/%5BDS%5D-Fundamentals-v0.1.0?type=design&node-id=394-46449&mode=design&t=jqOuhF1N6LV984M4-0)
-* [[Figma] Bio4C Design System / Fundamentals / Borders & Radius](https://www.figma.com/file/Svp4Vqs9rU5iJViXL3ARfC/%5BDS%5D-Fundamentals-v0.1.0?type=design&node-id=57-600&mode=design&t=jqOuhF1N6LV984M4-0)
-* [[Figma] Bio4C Design System / Fundamentals / Shadows](https://www.figma.com/file/Svp4Vqs9rU5iJViXL3ARfC/%5BDS%5D-Fundamentals-v0.1.0?type=design&node-id=57-597&mode=design&t=jqOuhF1N6LV984M4-0)

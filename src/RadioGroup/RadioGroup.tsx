@@ -11,7 +11,6 @@ export type RadioGroupProps = Omit<
   | keyof CommonProps
   | 'orientation'
   // TODO: study how to handle validation.
-  // Related to https://stljirap.sial.com/browse/UXUI-1452
   | 'validate'
   | 'validationBehavior'
 > &

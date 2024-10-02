@@ -37,23 +37,23 @@ Run the command from your package manager to install it.
   tabs={[
     {
       label: "npm",
-      code: `npm install @bio4c/ui-kit`,
+      code: `npm install ui-kit`,
       icon: <SvgNpm width="1em" height="1em" style={{verticalAlign: "middle"}}/>,
       checked: true
     },
     {
       label: "yarn",
-      code: `yarn add @bio4c/ui-kit`,
+      code: `yarn add ui-kit`,
       icon: <SvgYarn width="1em" height="1em" style={{verticalAlign: "middle"}}/>
     },
     {
       label: "pnpm",
-      code: `pnpm add @bio4c/ui-kit`,
+      code: `pnpm add ui-kit`,
       icon: <SvgPnpm width="1em" height="1em" style={{verticalAlign: "middle"}}/>
     },
     {
       label: "bun",
-      code: `bun add @bio4c/ui-kit`,
+      code: `bun add ui-kit`,
       icon: <SvgBun width="1em" height="1em" style={{verticalAlign: "middle"}}/>
     },
   ]}
@@ -61,7 +61,7 @@ Run the command from your package manager to install it.
 
 ## Peer Dependencies
 
-Please note that react and react-dom are peer dependencies, meaning you should ensure they are installed before installing Bio4c UI-Kit.
+Please note that react and react-dom are peer dependencies, meaning you should ensure they are installed before installing UI-Kit.
 
 <Source dark language="json" format code={`
   "peerDependencies": {
@@ -76,25 +76,25 @@ Once the dependency has been installed, you will need to **load the UI kit Style
 This can be done by **importing it through React** at the top of the root JS application file.
 
 <Source dark language="tsx" code={`
-  import '@bio4c/ui-kit/index.css';
+  import 'ui-kit/index.css';
 `}/>
 
 Then you can use any component of this library anywhere by importing it from the lib.
 
 <Source dark language="tsx" code={`
-  import { Button, CheckCircleIcon } from '@bio4c/ui-kit';
+  import { Button, CheckCircleIcon } from 'ui-kit';
 `}/>
 
 # Noto Font
 
-In order to support internationalization of your application, Bio4c UI-Kit expect your project to use the [Noto fonts](https://fonts.google.com/noto/specimen/Noto+Sans). \
+In order to support internationalization of your application, UI-Kit expect your project to use the [Noto fonts](https://fonts.google.com/noto/specimen/Noto+Sans). \
 To be more specific, it uses [`Noto Sans Display`](https://fontsource.org/fonts/noto-sans-display) package and [CJK](https://fonts.google.com/knowledge/type_in_china_japan_and_korea) packages ([`Noto Sans SC`](https://fontsource.org/fonts/noto-sans-sc), [`Noto Sans JP`](https://fontsource.org/fonts/noto-sans-jp), [`Noto Sans KR`](https://fontsource.org/fonts/noto-sans-kr)). \
 It is recommended to add those to your project via [Fontsource](https://fontsource.org/docs/getting-started/introduction). \
 But you can also do it through [Google Font DCN](https://fonts.google.com/selection/embed) or by downloading the fonts locally and following this [web fonts usage guide](https://fonts.google.com/knowledge/using_type/using_web_fonts).
 
 ## Fontsource
 
-Fontsource can be configured to load specific subsets, weights and styles. Default typography configuration of Bio4C Design System relies only on the 400, 500 and 600 font weights.
+Fontsource can be configured to load specific subsets, weights and styles. Default typography configuration of Design System relies only on the 400, 500 and 600 font weights.
 Recommended packages are:
 
 * [Noto Sans Display](https://fontsource.org/fonts/noto-sans-display/install): `@fontsource/noto-sans-display`

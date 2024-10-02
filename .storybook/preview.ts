@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/react';
-import { theme } from './merck.theme';
+import { theme } from './custom.theme';
 import './fonts.scss';
 import { withAccentBackground, withCleanSourceCode } from './decorators';
 

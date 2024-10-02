@@ -92,7 +92,7 @@ To get the expected typography token, build the variable name using `$typography
 For example, the typography of an `H3` element correspond to the `typographyHeadingH3` token. And the typography of an `medium` body element correspond to the `$typographyBodyMedium` token.
 
 <Source dark="true" language="css" code={`
-@use '@bio4c/ui-kit/designTokens';
+@use 'ui-kit/designTokens';
 
 p {
   font: designTokens.$typographyBodyMedium;
@@ -105,7 +105,7 @@ To get the expected typography token, build the variable name using `typography`
 For example, the typography of an `H3` element correspond to the `$typographyHeadingH3` token. And the typography of an `medium` body element correspond to the `typographyBodyMedium` token.
 
 <Source dark="true" language="js" code={`
-import { designTokens } from '@bio4c/ui-kit';
+import { designTokens } from 'ui-kit';
 
 const paragraphStyles = {
   font: designTokens.typographyBodyMedium
@@ -115,4 +115,3 @@ const paragraphStyles = {
 ## Resources
 
 * <LinkTo kind="Fundamentals/Design Tokens" story="docs">Fundamentals / Design Tokens</LinkTo>
-* [[Figma] Bio4C Design System / Fundamentals / Typography](https://www.figma.com/file/Svp4Vqs9rU5iJViXL3ARfC/%5BDS%5D-Fundamentals-v0.1.0?type=design&node-id=825-16136&mode=design&t=dwIgnA3ecYNudmtr-0)

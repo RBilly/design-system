@@ -6,7 +6,6 @@
 - [Component library entry point](#component-library-entry-point)
 - [Headless component library](#headless-component-library)
 - [CSS](#css)
-- [Storybook guidelines](#storybook-guidelines)
 - [Tests](#tests)
 
 <a name="component-api-definition"></a>
@@ -122,7 +121,7 @@ export { MyComponent } from './MyComponent';
 
 ## Headless component library
 
-Components must not be developed from scratch. Use instead components and components API from the headless component library [React Aria Components](https://react-spectrum.adobe.com/react-aria/components.html) as a basis to create our own components (see the [headless component library ADR](https://wiki.merckgroup.com/confluence/display/PAD/ADR+-+Component+library+-+Headless+component+libraries) to find out more about this choice).
+Components must not be developed from scratch. Use instead components and components API from the headless component library [React Aria Components](https://react-spectrum.adobe.com/react-aria/components.html) as a basis to create our own components.
 
 If a special case cannot be handled with a component from React Aria Components library (e.g. custom DOM structure), [React Aria Hooks](https://react-spectrum.adobe.com/react-aria/hooks.html) can be used (see https://react-spectrum.adobe.com/react-aria/advanced.html#hooks).
 
@@ -130,7 +129,7 @@ If a special case cannot be handled with a component from React Aria Components 
 
 ## CSS
 
-[vanilla-extract](https://vanilla-extract.style/) is the only way to write CSS in the component library repository (see the [CSS ADR](https://wiki.merckgroup.com/confluence/display/PAD/ADR+-+Component+library+-+CSS) to find out more about this choice).
+[vanilla-extract](https://vanilla-extract.style/) is the only way to write CSS in the component library repository.
 
 ### Do ✅
 
@@ -179,12 +178,6 @@ export function Button({ children }: ButtonProps) {
   return <button style={{ display: 'flex', ... }}>{children}</button>;
 }
 ```
-
-<a name="storybook-guidelines"></a>
-
-## Storybook guidelines
-
-Refer to the [Storybook guidelines](https://wiki.merckgroup.com/confluence/display/PAD/Guideline+-+Storybook) on Confluence to learn about best practices.
 
 <a name="tests"></a>
 

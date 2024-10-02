@@ -1,9 +1,9 @@
 {
   "private": true,
   "packageManager": "pnpm@9.11.0+sha512.0a203ffaed5a3f63242cd064c8fb5892366c103e328079318f78062f24ea8c9d50bc6a47aa3567cabefd824d170e78fa2745ed1f16b132e16436146b7688f19b",
-  "name": "@bio4c/ui-kit",
-  "version": "1.0.0-alpha.5",
-  "description": "Component library for the Bio4C Design System",
+  "name": "ui-kit",
+  "version": "1.0.0-develop",
+  "description": "Component library for the Design System",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -26,10 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://dfwstp01.sial.com/scm/biop/design-system.git"
-  },
-  "publishConfig": {
-    "registry": "https://merckgroup.jfrog.io/artifactory/api/npm/npm-biop-virtual/"
+    "url": "https://github.com/RBilly/design-system.git"
   },
   "scripts": {
     "build": "tsup",

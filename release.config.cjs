@@ -20,7 +20,7 @@ module.exports = {
       '@semantic-release/git',
       {
         // Do not change.
-        // Commit message is used to determine whether or not to publish a new release in the CI.
+        // Commit message is used to determine whether to publish a new release in the CI.
         message: 'chore(release): ${nextRelease.version} [skip ci]'
       }
     ]

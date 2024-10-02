@@ -120,7 +120,7 @@ Defined color roles make things easy to modify and customise later.
 In SCSS, the token name needs to be prefixed by `$` to be used.
 
 <Source dark language="css" code={`
-@use '@bio4c/ui-kit/designTokens';
+@use 'ui-kit/designTokens';
 
 p {
   color: designTokens.$colorBorderFocused;
@@ -130,7 +130,7 @@ p {
 ### JavaScript
 
 <Source dark language="js" code={`
-import { designTokens } from '@bio4c/ui-kit';
+import { designTokens } from 'ui-kit';
 
 const paragraphStyles = {
   color: designTokens.colorBorderFocused
@@ -140,4 +140,3 @@ const paragraphStyles = {
 ## Resources
 
 * <LinkTo kind="Fundamentals/Design Tokens" story="docs">Fundamentals / Design Tokens</LinkTo>
-* [[Figma] Bio4C Design System / Fundamentals / Colors](https://www.figma.com/file/Svp4Vqs9rU5iJViXL3ARfC/%5BDS%5D-Fundamentals-v0.1.0?type=design&node-id=346-18399&mode=design&t=lBSvA8lHo9TsGdBn-0)

@@ -20,7 +20,7 @@ export default defineConfig({
   dts: true,
   // Clean output directory before each build.
   clean: true,
-  // Allow design tokens to be imported in sass files from `@bio4c/ui-kit/designTokens`.
+  // Allow design tokens to be imported in sass files from `ui-kit/designTokens`.
   publicDir: true,
   esbuildPlugins: [
     vanillaExtractPlugin({

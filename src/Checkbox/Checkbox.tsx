@@ -12,7 +12,6 @@ export type CheckboxProps = Omit<
   RacCheckboxProps,
   | keyof CommonProps
   // TODO: study how to handle validation.
-  // Related to https://stljirap.sial.com/browse/UXUI-1452
   | 'validate'
   | 'validationBehavior'
 > &

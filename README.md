@@ -1,6 +1,6 @@
 # design-system
 
-> Component library for the Bio4C Design System
+> Component library for the Design System
 
 ## Local development
 
@@ -50,14 +50,6 @@ This repository uses [conventional commits](https://www.conventionalcommits.org/
 
 [optional footer(s)]
 ```
-
-For tracking purposes, a Jira issue must be added at the end of the commit message:
-
-```
-<type>[optional scope]: <description> [<Jira issue>]
-```
-
-Please note that the `commit-msg` hook will not check if a Jira issue is present, but if missing, the commit will be rejected by [Yet Another Commit Checker](https://appfire.atlassian.net/wiki/spaces/YACC/overview) once pushed.
 
 # Version management
 

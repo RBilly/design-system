@@ -279,7 +279,7 @@
     "default": {
       "$type": "dimension",
       "$value": "4px",
-      "$description": "Use for most components in the Bio4C Design system: such as cards, input fields, buttons, search etc..."
+      "$description": "Use for most components in the Design system: such as cards, input fields, buttons, search etc..."
     },
     "modal": {
       "$type": "dimension",
