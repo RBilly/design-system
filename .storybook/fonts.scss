@@ -1,0 +1,15 @@
+@use 'sass:meta';
+@use '@fontsource/noto-sans-display/scss/mixins' as Noto;
+@use '@fontsource/noto-sans-sc/scss/mixins' as NotoSC;
+@use '@fontsource/noto-sans-jp/scss/mixins' as NotoJP;
+@use '@fontsource/noto-sans-kr/scss/mixins' as NotoKR;
+
+@mixin faces($font, $subsets) {
+  $faces: meta.get-mixin('faces', $font);
+  @include meta.apply($faces, $weights: (400, 500, 600), $subsets: $subsets, $formats: woff2);
+}
+
+@include faces(Noto, latin);
+@include faces(NotoSC, chinese-simplified);
+@include faces(NotoJP, japanese);
+@include faces(NotoKR, korean);

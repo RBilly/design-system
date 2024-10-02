@@ -1,0 +1,83 @@
+import { Meta } from '@storybook/blocks';
+import LinkTo from '@storybook/addon-links/react';
+import { SettingsIcon, VisibilityOnIcon, ViewGridIcon } from '../../src/icons';
+import style from './introduction.module.css';
+
+<Meta title="Overview/Introduction" />
+
+# About Bio4C UI-Kit
+
+Bio4C UI-Kit is a React component library that implements the Bio4C Design System. \
+The purpose of this project is to provide a unified toolkit used by UX-designers and developers. \
+Using this library and following implementation guidelines, ensures projects will be accessible and ready to be internationalized. \
+It also ensures a consistent and appealing look and feel that represent the Bio4C brand and follows our design guidelines.
+
+## Design principles
+
+This project was created to help build products tailored to provide the best user experience possible for software interfaces running on skid platform. \
+By providing unified, reusable and composable design elements, designing the layout of the projects of tomorrow will be simplified and accelerated.
+
+## Development principles
+
+This library is based on the [React Aria Component (RAC) library](https://react-spectrum.adobe.com/react-aria/index.html) which provides headless React components that helps build components for design system with a strong focus on [accessibility](https://react-spectrum.adobe.com/react-aria/accessibility.html), [internationalization](https://react-spectrum.adobe.com/react-aria/internationalization.html) and [interactions](https://react-spectrum.adobe.com/react-aria/interactions.html). \
+It allows our team to focus on creating components with our unique design and styling rather than re-building these challenging aspects. \
+React Aria is backed by Adobe® and is meticulously tested which gives us the necessary confidence to build our component library on top of it.
+
+By providing reusable and composable React component, development of new digital products based on React web applications will be greatly simplified and accelerated.
+
+## Documentation
+
+This is a living document which is updated every time a new release of the project is made.
+Here you can find our design guidelines, component documentation, and resources for building apps that follows the Bio4C Design System.
+
+<div className={style.container}>
+  <div className={style.card}>
+    <div>
+      <div className={style.icon}>
+        <SettingsIcon size="large" />
+      </div>
+
+      <h3>Getting Started</h3>
+      <p>Instruction to install and use the kit in your application.</p>
+    </div>
+
+    <div>
+      <LinkTo kind="Overview/Getting Started" story="docs">View More</LinkTo>
+    </div>
+  </div>
+
+  <div className={style.card}>
+    <div>
+      <div className={style.icon}>
+        <VisibilityOnIcon size="large" />
+      </div>
+
+      <h3>Fundamentals</h3>
+      <p>Guidelines and info about design system tokens, colors, typography and available icons.</p>
+    </div>
+
+    <div>
+      <LinkTo kind="Fundamentals/Design Tokens" story="docs">View More</LinkTo>
+    </div>
+  </div>
+
+  <div className={style.card}>
+    <div>
+      <div className={style.icon}>
+        <ViewGridIcon size="large" />
+      </div>
+
+      <h3>Components</h3>
+      <p>Guidelines and playground for all available components.</p>
+    </div>
+
+    <div>
+      <LinkTo kind="Components/Inputs/Button" story="docs">View More</LinkTo>
+    </div>
+  </div>
+</div>
+
+## Feedback
+
+If there is a component or pattern you need or if you have any question or comment, please contact us. \
+You can contact us through the dedicated [Teams channel](https://teams.microsoft.com/l/channel/19%3Add0ff2d0882a420189aa6ce90333734a%40thread.tacv2/Team%20-%20PF%20-%20Braavos%20(UIUX)?groupId=53ef8664-ce3b-4394-ae00-d72b5e117a48&tenantId=db76fb59-a377-4120-bc54-59dead7d39c9). Your feedback is highly appreciated!

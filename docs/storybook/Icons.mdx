@@ -1,0 +1,33 @@
+import LinkTo from "@storybook/addon-links/react";
+import {IconGallery, IconItem, Meta, Source} from '@storybook/blocks';
+import * as icons from '../../src/icons';
+
+<Meta title="Fundamentals/Icons"/>
+
+# Icons
+Icons are graphic symbols that are used to represent concepts, objects or actions.
+Each icon is designed to communicate intent and facilitate navigation.
+They reinforce the meaning of an information to emphasize it in the hierarchy.
+
+## List
+
+<IconGallery>
+  {Object.entries(icons).map(([componentName, Icon]) => (
+    <IconItem
+      key={componentName}
+      name={componentName}
+    >
+      <Icon/>
+    </IconItem>
+  ))}
+</IconGallery>
+
+## Usage
+
+<Source dark code={`
+import { SettingsIcon } from '@bio4c/ui-kit';
+
+<SettingsIcon />
+`}/>
+
+<LinkTo kind="Components/Data Display/Icon" story="docs">Icon component page</LinkTo> to find out more about the icons API.

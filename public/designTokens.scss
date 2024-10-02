@@ -1,0 +1,106 @@
+
+// Do not edit directly
+// Generated on Thu, 13 Jun 2024 01:06:17 GMT
+
+$typographyLabelSmall: 500 0.75rem/1rem "Noto Sans Display", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR", sans-serif;
+$typographyLabelMedium: 500 0.875rem/1.25rem "Noto Sans Display", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR", sans-serif;
+$typographyLabelLarge: 600 1rem/1.5rem "Noto Sans Display", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR", sans-serif;
+$typographyLabelXl: 500 1.125rem/1.5rem "Noto Sans Display", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR", sans-serif;
+$typographyBodyXs: 400 0.75rem/1rem "Noto Sans Display", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR", sans-serif;
+$typographyBodySmall: 400 0.875rem/1.25rem "Noto Sans Display", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR", sans-serif;
+$typographyBodyMedium: 400 1rem/1.5rem "Noto Sans Display", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR", sans-serif;
+$typographyHeadingH6: 600 0.75rem/1rem "Noto Sans Display", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR", sans-serif;
+$typographyHeadingH5: 600 0.875rem/1.25rem "Noto Sans Display", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR", sans-serif;
+$typographyHeadingH4: 600 1rem/1.5rem "Noto Sans Display", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR", sans-serif;
+$typographyHeadingH3: 500 1.125rem/1.5rem "Noto Sans Display", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR", sans-serif;
+$typographyHeadingH2: 500 1.5rem/2rem "Noto Sans Display", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR", sans-serif;
+$typographyHeadingH1: 500 2rem/2.5rem "Noto Sans Display", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR", sans-serif;
+$shadowSunken: 0px 1px 2px 0px #0f1a2e26 inset; // Use to create a shadow when an element is sunk below the current surface.
+$shadowOverlay: 0px 16px 32px 0px #0f1a2e26; // Use for elements that sit on top of the UI such as dialog, modal, dropdown menu and whenever it requires full attention of the user on the element. User is not able to interact with what is behind.
+$shadowOverflow: 0px 4px 4px 0px #00000040; // Use to create a shadow when content scrolls under other content.
+$shadowRaised: 0px 1px 2px 0px #0f1a2e26; // Use for cards and other elements that needs to be slightly raised over content layer to draw user attention but should not go over other elements in the UI.
+$opacityOverlay: 0.25; // Applies to overlay that should allow see through like a loading overlay or a modal overlay
+$opacityDisabled: 0.4; // Applies to element to should appear disabled
+$borderLarge: 2px; // Use to emphasize actions elements such as buttons and tabs.
+$borderDefault: 1px; // Use as the default value for most of the elements such as dividers, input fields, cards, tables, tags etc...
+$radiusFull: 999px; // Use for circular action buttons, chips, tags. These full rounded shapes communicate a specific behavior. The full rounded radius should not be used for cosmetic purposes.
+$radiusModal: 8px; // Use for modals, bottom sheets, left or right panels. Basically it is mostly used for large content zone in the interface.
+$radiusDefault: 4px; // Use for most components in the Bio4C Design system: such as cards, input fields, buttons, search etc...
+$spacingXs025: 0.125rem;
+$spacingXl1200: 6rem;
+$spacingXl800: 4rem;
+$spacingXl600: 3rem;
+$spacingL400: 2rem;
+$spacingL300: 1.5rem;
+$spacingS150: 0.75rem;
+$spacingS100: 0.5rem;
+$spacingXs050: 0.25rem;
+$spacingM200: 1rem;
+$colorWhite: #ffffff;
+$colorMagenta500: #eb3c96;
+$colorPurple500: #8a68d2;
+$colorGreen800: #00540c;
+$colorGreen500: #009916;
+$colorGreen50: #e6f5e8;
+$colorYellow800: #3d2e0a;
+$colorYellow200: #ffc832;
+$colorYellow50: #fff3d9;
+$colorRed800: #750c24;
+$colorRed600: #e61e50;
+$colorRed100: #ffdadc;
+$colorCyan500: #08a3b0;
+$colorBlue800: #0a3b61;
+$colorBlue700: #085897;
+$colorBlue600: #0f69af;
+$colorBlue50: #ecf5fc;
+$colorNeutral900: #0f192e;
+$colorNeutral700: #454554;
+$colorNeutral300: #a9a9ba;
+$colorNeutral200: #c7c7d1;
+$colorNeutral100: #e1e1ea;
+$colorNeutral50: #ececf4;
+$colorNeutral10: #f8f8fc;
+$colorBorderFocused: $colorYellow200; // border color for focus ring
+$colorBorderOnAccent: $colorWhite; // secondary buttons border on accent background
+$colorBorderDisabled: $colorNeutral50; // disabled stroke
+$colorBorderActive: $colorCyan500; // for active state of search, selector.
+$colorBorderLight: $colorNeutral50; // light border color
+$colorBorderSelected: $colorBlue600; // element is selected, active.
+$colorBorderHover: $colorNeutral700; // when hovering or pressing on an element using default border color.
+$colorBorderDefault: $colorNeutral200; // default border color
+$colorIconBrand: $colorBlue600; // icon on white background such as within button
+$colorIconOnAccent: $colorWhite; // when icon is on an accent color background (ex: button)
+$colorIconDisabled: $colorNeutral300; // disabled icons
+$colorIconDecorative: $colorCyan500; // Use for decorative icons to highlight information and add a touch of style.
+$colorIconPrimary: $colorNeutral700; // primary color when the icon support an information, or is clickable among other clickable icons.
+$colorAccentMagenta: $colorMagenta500; // For graphs only.
+$colorAccentPurple: $colorPurple500; // For graphs only.
+$colorAccentSuccess: $colorGreen500; // tags, icons, shapes for positive message.
+$colorAccentWarning: $colorYellow200; // tags, icons, shapes for warning message.
+$colorAccentDanger: $colorRed600; // tags, icons, shapes for important or critical message to communicate.
+$colorAccentSecondary: $colorCyan500; // decorative for icons, illustrations, graphs... Use as accent color of elements when background is default blue.
+$colorAccentPrimary: $colorBlue600; // navigation, clickable and selected elements (Ex: tabs, checkbox, radio...)
+$colorBackgroundSunken: $colorNeutral100; // Use for background of lowest elevation layers. A sunken surface can be used to group items such as cards.
+$colorBackgroundOverlay: $colorNeutral900; // background overlay behind a modal
+$colorBackgroundBrandPressed: $colorBlue800; // Pressed state for elements using blue brand background.
+$colorBackgroundContainerDarker: $colorNeutral50; // on top of container background in the UI. For scroll bars.
+$colorBackgroundSuccess: $colorGreen50; // success, positive message to communicate.
+$colorBackgroundWarning: $colorYellow50; // warning message to communicate.
+$colorBackgroundDanger: $colorRed100; // critical, important message to communicate
+$colorBackgroundSelected: $colorBlue50; // selected elements, informative banner message.
+$colorBackgroundBrandHover: $colorBlue700; // mouse-hover for elements using blue brand background.
+$colorBackgroundBrand: $colorBlue600; // navigation, main CTA
+$colorBackgroundPressed: $colorNeutral100; // mouse-hover for container
+$colorBackgroundContainer: $colorNeutral10; // search, input fields, cards, content zone (example: graph). Containers are always above the default background on the z-index axis.
+$colorBackgroundHovered: $colorNeutral50; // mouse-hover for default white background
+$colorBackgroundDefault: $colorWhite; // page, modal, dialogs, dropdown menus.
+$colorTextOnSuccess: $colorGreen800; // success or positive message.
+$colorTextOnWarning: $colorYellow800; // warning message (ex: alarms)
+$colorTextOnDanger: $colorRed800; // danger or negative message (ex: alarms)
+$colorTextLinkHovered: $colorBlue700; // text link hovered
+$colorTextLinkPressed: $colorBlue800; // text link hover + pressed states
+$colorTextLinkDefault: $colorBlue600; // text link (not within a button container)
+$colorTextOnAccent: $colorWhite; // when text is on blue default background (ex: button)
+$colorTextTertiary: $colorNeutral300; // disabled element, field input placeholder.
+$colorTextSecondary: $colorNeutral700; // subtitle, paragraph copy, conditions line.
+$colorTextPrimary: $colorNeutral900; // title, body copy, sentence case headers.

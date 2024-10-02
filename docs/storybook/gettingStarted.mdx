@@ -1,0 +1,177 @@
+import {Meta, Source} from '@storybook/blocks';
+import {Tab, TabList, TabPanel, Tabs} from 'react-aria-components';
+import SvgNpm from '../assets/npm.svg';
+import SvgYarn from '../assets/yarn.svg';
+import SvgPnpm from '../assets/pnpm.svg';
+import SvgBun from '../assets/bun.svg';
+import style from "./gettingStarted.module.css";
+
+export function PkgInstallTabs({tabs}) {
+  return (
+    <Tabs>
+      <TabList className={style["tab-list"]}>
+        {tabs.map(({label, icon}) => (
+          <Tab key={`${label}tab`} className={style.tab} id={label}>{icon} <span
+            style={{verticalAlign: "middle"}}>{label}</span></Tab>
+        ))}
+      </TabList>
+      {tabs.map(({label, code}) => (
+        <TabPanel key={`${label}panel`} className={style["tab-panel"]} id={label}>
+          <Source dark language="bash" code={code}/>
+        </TabPanel>
+      ))}
+    </Tabs>
+  );
+}
+
+<Meta title="Overview/Getting Started"/>
+
+# UI-Kit Package
+
+## Installation
+
+To use the component library in your React application you must first add the kit as a dependency. \
+Run the command from your package manager to install it.
+
+<PkgInstallTabs
+  tabs={[
+    {
+      label: "npm",
+      code: `npm install @bio4c/ui-kit`,
+      icon: <SvgNpm width="1em" height="1em" style={{verticalAlign: "middle"}}/>,
+      checked: true
+    },
+    {
+      label: "yarn",
+      code: `yarn add @bio4c/ui-kit`,
+      icon: <SvgYarn width="1em" height="1em" style={{verticalAlign: "middle"}}/>
+    },
+    {
+      label: "pnpm",
+      code: `pnpm add @bio4c/ui-kit`,
+      icon: <SvgPnpm width="1em" height="1em" style={{verticalAlign: "middle"}}/>
+    },
+    {
+      label: "bun",
+      code: `bun add @bio4c/ui-kit`,
+      icon: <SvgBun width="1em" height="1em" style={{verticalAlign: "middle"}}/>
+    },
+  ]}
+/>
+
+## Peer Dependencies
+
+Please note that react and react-dom are peer dependencies, meaning you should ensure they are installed before installing Bio4c UI-Kit.
+
+<Source dark language="json" format code={`
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
+  }
+`}/>
+
+## Usage
+
+Once the dependency has been installed, you will need to **load the UI kit Stylesheet** in order to be able to use its components. \
+This can be done by **importing it through React** at the top of the root JS application file.
+
+<Source dark language="tsx" code={`
+  import '@bio4c/ui-kit/index.css';
+`}/>
+
+Then you can use any component of this library anywhere by importing it from the lib.
+
+<Source dark language="tsx" code={`
+  import { Button, CheckCircleIcon } from '@bio4c/ui-kit';
+`}/>
+
+# Noto Font
+
+In order to support internationalization of your application, Bio4c UI-Kit expect your project to use the [Noto fonts](https://fonts.google.com/noto/specimen/Noto+Sans). \
+To be more specific, it uses [`Noto Sans Display`](https://fontsource.org/fonts/noto-sans-display) package and [CJK](https://fonts.google.com/knowledge/type_in_china_japan_and_korea) packages ([`Noto Sans SC`](https://fontsource.org/fonts/noto-sans-sc), [`Noto Sans JP`](https://fontsource.org/fonts/noto-sans-jp), [`Noto Sans KR`](https://fontsource.org/fonts/noto-sans-kr)). \
+It is recommended to add those to your project via [Fontsource](https://fontsource.org/docs/getting-started/introduction). \
+But you can also do it through [Google Font DCN](https://fonts.google.com/selection/embed) or by downloading the fonts locally and following this [web fonts usage guide](https://fonts.google.com/knowledge/using_type/using_web_fonts).
+
+## Fontsource
+
+Fontsource can be configured to load specific subsets, weights and styles. Default typography configuration of Bio4C Design System relies only on the 400, 500 and 600 font weights.
+Recommended packages are:
+
+* [Noto Sans Display](https://fontsource.org/fonts/noto-sans-display/install): `@fontsource/noto-sans-display`
+* [Noto Sans Simplified Chinese](https://fontsource.org/fonts/noto-sans-sc/install): `@fontsource/noto-sans-sc`
+* [Noto Sans Japanese](https://fontsource.org/fonts/noto-sans-jp/install): `@fontsource/noto-sans-jp`
+* [Noto Sans Korean](https://fontsource.org/fonts/noto-sans-kr/install): `@fontsource/noto-sans-kr`
+
+To install the packages, click on the links above and follow the instructions. \
+There is multiple ways to use the fonts from Fontsource.
+
+Either load complete font files per weight and subset in a JS or TS file at the root of your application.
+It will give the smallest total bundled size but individual files are actually quite big (**~2MB** for each Chinese font file that will need to be loaded in the application).
+Import a css file for each combination of subset and weight that you want to use.
+
+<Source dark language="ts" format code={`
+import '@fontsource/noto-sans-display/latin-400.css';
+import '@fontsource/noto-sans-display/latin-500.css';
+import '@fontsource/noto-sans-display/latin-600.css';
+import '@fontsource/noto-sans-sc/chinese-simplified-400.css';
+import '@fontsource/noto-sans-sc/chinese-simplified-500.css';
+import '@fontsource/noto-sans-sc/chinese-simplified-600.css';
+import '@fontsource/noto-sans-jp/japanese-400.css';
+import '@fontsource/noto-sans-jp/japanese-500.css';
+import '@fontsource/noto-sans-jp/japanese-600.css';
+import '@fontsource/noto-sans-kr/korean-400.css';
+import '@fontsource/noto-sans-kr/korean-500.css';
+import '@fontsource/noto-sans-kr/korean-600.css';
+`}/>
+
+Or only specify the weights and let fontsource include all necessary files chunked down to small files (**~10KB**).
+Overall bundled size will be quite bigger but at runtime, only small files will be loaded when required only. It’s a nice performance improvement.
+
+<Source dark language="ts" format code={`
+import '@fontsource/noto-sans-display/400.css';
+import '@fontsource/noto-sans-display/500.css';
+import '@fontsource/noto-sans-display/600.css';
+import '@fontsource/noto-sans-sc/400.css';
+import '@fontsource/noto-sans-sc/500.css';
+import '@fontsource/noto-sans-sc/600.css';
+import '@fontsource/noto-sans-jp/400.css';
+import '@fontsource/noto-sans-jp/500.css';
+import '@fontsource/noto-sans-jp/600.css';
+import '@fontsource/noto-sans-kr/400.css';
+import '@fontsource/noto-sans-kr/500.css';
+import '@fontsource/noto-sans-kr/600.css';
+`}/>
+
+Or if your project uses **Sass**, you can use the mixins provided by fontsource to optimize the import of needed fonts (see [Faces Mixin | Documentation | Fontsource](https://fontsource.org/docs/getting-started/faces-mixin) ).
+This should give you the best results as it will drastically reduce the bundled size but keep the nice performance boost from the small 10KB files.
+
+<Source dark language="js" format code={`
+@use 'sass:meta';
+@use '@fontsource/noto-sans-display/scss/mixins' as Noto;
+@use '@fontsource/noto-sans-sc/scss/mixins' as NotoSC;
+@use '@fontsource/noto-sans-jp/scss/mixins' as NotoJP;
+@use '@fontsource/noto-sans-kr/scss/mixins' as NotoKR;
+
+@mixin faces($font, $subsets) {
+  $faces: meta.get-mixin('faces', $font);
+  @include meta.apply($faces, $weights: (400, 500, 600), $subsets: $subsets, $formats: woff2);
+}
+
+@include faces(Noto, latin);
+@include faces(NotoSC, chinese-simplified);
+@include faces(NotoJP, japanese);
+@include faces(NotoKR, korean);
+`}/>
+
+## Google Web Fonts
+
+<div className={[style.admonition, style.warning].join(' ')}>
+  **⚠️ Warning** \
+  If you decide to install fonts through the CDN, make sure that your project will run in an
+  environment with internet access.
+</div>
+
+## Local Hosting
+
+You can also download the fonts file directly into your project folder and manage them yourself. \
+Follow the [web fonts usage guide](https://fonts.google.com/knowledge/using_type/using_web_fonts) for instructions.

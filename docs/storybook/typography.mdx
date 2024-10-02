@@ -1,0 +1,118 @@
+import LinkTo from '@storybook/addon-links/react';
+import { Meta, Source } from '@storybook/blocks';
+import designTokens from '../assets/designTokens.json';
+
+export function formatTypographySettings({fontFamily, ...tokenValue}) {
+  return Object.entries(tokenValue).map(([k, v]) => (
+    <div key={k} style={{display: "flex", justifyContent: "space-between"}}>
+      <div>{k}:</div><div>{v}</div>
+    </div>
+  ))
+}
+
+export function TypographyTokens({ tokens }) {
+  return tokens.map((token) => (
+    <div
+      key={token.name}
+      style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 4fr',
+        gap: 16,
+        alignItems: 'center',
+        marginBottom: 16
+      }}
+    >
+      <div style={{display: "flex", flexDirection: "column"}}>
+        <h3 >{token.figmaVariable.split('/').at(-1)}</h3>
+        {formatTypographySettings(token.value)}
+      </div>
+      <div
+        style={{
+          ...token.value,
+          flexGrow: 1,
+          padding: 32,
+          backgroundColor: '#fff',
+          borderRadius: 4,
+          boxShadow: 'rgba(0, 0, 0, 0.10) 0 1px 3px 0'
+        }}
+      >
+        The quick brown fox jumps over the lazy dog.
+        <hr/>
+        Voix ambiguë d’un cœur qui au zéphyr préfère les jattes de kiwi.
+        <hr/>
+        这句话后来演变成“饮水思源”这个成语，意为喝水的时候想一想流水的源头，比喻不忘本
+        <hr/>
+        동해 물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세.
+        <hr/>
+        新しい時代のこころを映すタイプフェイスデザイン
+      </div>
+    </div>
+  ));
+}
+
+<Meta title="Fundamentals/Typography" />
+
+# Typography
+
+## Typefaces
+
+Noto is a joint project by Google, Adobe, and Monotype with extensive language support. \
+The Noto name, short for "no tofu," is explained by the project’s mission to eliminate "Tofu", the blank rectangles that look like tofu that are shown when no font is available for your text.
+Noto Sans is a global font collection with unmodulated (“sans serif”) design for writing in all modern and ancient languages. \
+Noto Sans communicates openness and has a neutral tone. In our user interfaces, we use the following typefaces from this collection:
+
+* [Noto Sans Display](https://fonts.google.com/noto/specimen/Noto+Sans+Display) for texts in the Latin, Cyrillic and Greek scripts.
+* [Noto Sans Simplified Chinese](https://fonts.google.com/noto/specimen/Noto+Sans+SC) for languages in mainland China that use the Simplified Chinese variant of the Han ideograms.
+* [Noto Sans Japanese](https://fonts.google.com/noto/specimen/Noto+Sans+JP) for the Japanese language and other languages used in Japan.
+* [Noto Sans Korean](https://fonts.google.com/noto/specimen/Noto+Sans+KR) for the Korean language using Hangul and the Korean Hanja scripts.
+
+## Heading
+
+<TypographyTokens tokens={designTokens.global.typography.heading.values} />
+
+## Body
+
+<TypographyTokens tokens={designTokens.global.typography.body.values} />
+
+## Label
+
+<TypographyTokens tokens={designTokens.global.typography.label.values} />
+
+## Installation
+
+Refer to the instructions provided in the [Noto Font install section](../?path=/docs/overview-getting-started--docs#noto-font).
+
+## Usage
+
+If you are looking for a document referencing all typography tokens, please visit the [Dictionary section](../?path=/docs/fundamentals-design-tokens--docs#dictionary) and open up the **Typography** panel.
+
+### SCSS
+
+To get the expected typography token, build the variable name using `$typography` prefix followed by the typography category (`Heading`,`Body`,`Label`) and then the element type. \
+For example, the typography of an `H3` element correspond to the `typographyHeadingH3` token. And the typography of an `medium` body element correspond to the `$typographyBodyMedium` token.
+
+<Source dark="true" language="css" code={`
+@use '@bio4c/ui-kit/designTokens';
+
+p {
+  font: designTokens.$typographyBodyMedium;
+}
+`}/>
+
+### JavaScript
+
+To get the expected typography token, build the variable name using `typography` prefix followed by the typography category (`Heading`,`Body`,`Label`) and then the element type. \
+For example, the typography of an `H3` element correspond to the `$typographyHeadingH3` token. And the typography of an `medium` body element correspond to the `typographyBodyMedium` token.
+
+<Source dark="true" language="js" code={`
+import { designTokens } from '@bio4c/ui-kit';
+
+const paragraphStyles = {
+  font: designTokens.typographyBodyMedium
+};
+`}/>
+
+## Resources
+
+* <LinkTo kind="Fundamentals/Design Tokens" story="docs">Fundamentals / Design Tokens</LinkTo>
+* [[Figma] Bio4C Design System / Fundamentals / Typography](https://www.figma.com/file/Svp4Vqs9rU5iJViXL3ARfC/%5BDS%5D-Fundamentals-v0.1.0?type=design&node-id=825-16136&mode=design&t=dwIgnA3ecYNudmtr-0)

@@ -1,0 +1,43 @@
+import {Meta} from "@storybook/blocks";
+import designTokens from '../assets/designTokens.json';
+
+
+export function GlobalSpacing({tokens}) {
+  return Object.values(tokens)
+    .sort((tokenA, tokenB) => tokenA.value.split('rem')[0] - tokenB.value.split('rem')[0])
+    .map((token) => (
+      <div key={token.name}>
+        <div style={{display: 'flex', flexDirection: 'row', gap: '20px'}}>
+          <div style={{
+            flexGrow: '0',
+            flexShrink: '0',
+            flexBasis: '8rem',
+            minHeight: '6rem'
+          }}>
+            <div style={{
+              backgroundColor: '#0f69af',
+              width: token.value,
+              height: token.value,
+              boxShadow: '#0f1a2e26 0px 1px 2px 0px',
+            }}>
+            </div>
+          </div>
+          <div>
+            <strong>Token:</strong> <code>{token.name}</code><br/>
+            <strong>Value:</strong> <code>{token.value}</code>
+          </div>
+        </div>
+        <hr/>
+      </div>
+    ))
+}
+
+
+<Meta title="Fundamentals/Spacing"/>
+
+# Spacing
+
+Apply consistent and harmonious space within and between ui elements.
+It is the horizontal and vertical distance between or around design elements.
+
+<GlobalSpacing tokens={designTokens.global.spacing.values}/>

@@ -1,0 +1,46 @@
+import {Meta} from "@storybook/blocks";
+import designTokens from '../assets/designTokens.json';
+
+export function AliasShadows({tokens}) {
+  return Object.values(tokens).map((token) => (
+      <div key={token.name}>
+        <div style={{display: 'flex', flexDirection: 'row', gap: '20px'}}>
+          <div style={{
+            backgroundColor: '#f8f8fc',
+            borderRadius: '4px',
+            width: '80px',
+            height: '80px',
+            boxShadow: token.value,
+            flexGrow: '0',
+            flexShrink: '0',
+            margin: '10px'
+          }}>
+          </div>
+          <div>
+            <strong>Token:</strong> <code>{token.name}</code><br/>
+            <strong>Usage:</strong> {token.description}<br/>
+            <strong>Value:</strong> <code>{token.value}</code>
+          </div>
+        </div>
+        <hr/>
+      </div>
+    )
+  )
+}
+
+<Meta title="Fundamentals/Elevation"/>
+
+# Elevation
+Elevations are layered surfaces that form the foundation of UI.
+It provides cues about the surface depth and stacking order of elements in an experience.
+They create a blank canvas where other UI will be placed, such as text, icons, backgrounds, and borders.
+
+Elevation tokens are used to give elements the appearance of being raised off the page. \
+Use them with the box-shadow property. \
+These are especially useful for menus, popovers, and dialogs.
+
+## Shadows
+
+Shadows are used to give the impression of distance or elevation between surfaces, which adds depth to our designs.
+
+<AliasShadows tokens={designTokens.alias.shadows.values}/>

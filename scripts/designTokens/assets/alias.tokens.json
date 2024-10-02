@@ -1,0 +1,319 @@
+{
+  "color": {
+    "text": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.neutral.900}",
+        "$description": "title, body copy, sentence case headers."
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "{color.neutral.700}",
+        "$description": "subtitle, paragraph copy, conditions line."
+      },
+      "tertiary": {
+        "$type": "color",
+        "$value": "{color.neutral.300}",
+        "$description": "disabled element, field input placeholder."
+      },
+      "onAccent": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$description": "when text is on blue default background (ex: button)"
+      },
+      "link": {
+        "default": {
+          "$type": "color",
+          "$value": "{color.blue.600}",
+          "$description": "text link (not within a button container)"
+        },
+        "pressed": {
+          "$type": "color",
+          "$value": "{color.blue.800}",
+          "$description": "text link hover + pressed states"
+        },
+        "hovered": {
+          "$type": "color",
+          "$value": "{color.blue.700}",
+          "$description": "text link hovered"
+        }
+      },
+      "onDanger": {
+        "$type": "color",
+        "$value": "{color.red.800}",
+        "$description": "danger or negative message (ex: alarms)"
+      },
+      "onWarning": {
+        "$type": "color",
+        "$value": "{color.yellow.800}",
+        "$description": "warning message (ex: alarms)"
+      },
+      "onSuccess": {
+        "$type": "color",
+        "$value": "{color.green.800}",
+        "$description": "success or positive message."
+      }
+    },
+    "background": {
+      "default": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$description": "page, modal, dialogs, dropdown menus."
+      },
+      "hovered": {
+        "$type": "color",
+        "$value": "{color.neutral.50}",
+        "$description": "mouse-hover for default white background"
+      },
+      "container": {
+        "$type": "color",
+        "$value": "{color.neutral.10}",
+        "$description": "search, input fields, cards, content zone (example: graph). Containers are always above the default background on the z-index axis."
+      },
+      "pressed": {
+        "$type": "color",
+        "$value": "{color.neutral.100}",
+        "$description": "mouse-hover for container"
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "{color.blue.600}",
+        "$description": "navigation, main CTA"
+      },
+      "brandHover": {
+        "$type": "color",
+        "$value": "{color.blue.700}",
+        "$description": "mouse-hover for elements using blue brand background."
+      },
+      "selected": {
+        "$type": "color",
+        "$value": "{color.blue.50}",
+        "$description": "selected elements, informative banner message."
+      },
+      "danger": {
+        "$type": "color",
+        "$value": "{color.red.100}",
+        "$description": "critical, important message to communicate"
+      },
+      "warning": {
+        "$type": "color",
+        "$value": "{color.yellow.50}",
+        "$description": "warning message to communicate."
+      },
+      "success": {
+        "$type": "color",
+        "$value": "{color.green.50}",
+        "$description": "success, positive message to communicate."
+      },
+      "containerDarker": {
+        "$type": "color",
+        "$value": "{color.neutral.50}",
+        "$description": "on top of container background in the UI. For scroll bars."
+      },
+      "brandPressed": {
+        "$type": "color",
+        "$value": "{color.blue.800}",
+        "$description": "Pressed state for elements using blue brand background."
+      },
+      "overlay": {
+        "$type": "color",
+        "$value": "{color.neutral.900}",
+        "$description": "background overlay behind a modal"
+      },
+      "sunken": {
+        "$type": "color",
+        "$value": "{color.neutral.100}",
+        "$description": "Use for background of lowest elevation layers. A sunken surface can be used to group items such as cards."
+      }
+    },
+    "accent": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.blue.600}",
+        "$description": "navigation, clickable and selected elements (Ex: tabs, checkbox, radio...)"
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "{color.cyan.500}",
+        "$description": "decorative for icons, illustrations, graphs... Use as accent color of elements when background is default blue."
+      },
+      "danger": {
+        "$type": "color",
+        "$value": "{color.red.600}",
+        "$description": "tags, icons, shapes for important or critical message to communicate."
+      },
+      "warning": {
+        "$type": "color",
+        "$value": "{color.yellow.200}",
+        "$description": "tags, icons, shapes for warning message."
+      },
+      "success": {
+        "$type": "color",
+        "$value": "{color.green.500}",
+        "$description": "tags, icons, shapes for positive message."
+      },
+      "purple": {
+        "$type": "color",
+        "$value": "{color.purple.500}",
+        "$description": "For graphs only."
+      },
+      "magenta": {
+        "$type": "color",
+        "$value": "{color.magenta.500}",
+        "$description": "For graphs only."
+      }
+    },
+    "icon": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.neutral.700}",
+        "$description": "primary color when the icon support an information, or is clickable among other clickable icons."
+      },
+      "decorative": {
+        "$type": "color",
+        "$value": "{color.cyan.500}",
+        "$description": "Use for decorative icons to highlight information and add a touch of style."
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "{color.neutral.300}",
+        "$description": "disabled icons"
+      },
+      "onAccent": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$description": "when icon is on an accent color background (ex: button)"
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "{color.blue.600}",
+        "$description": "icon on white background such as within button"
+      }
+    },
+    "border": {
+      "default": {
+        "$type": "color",
+        "$value": "{color.neutral.200}",
+        "$description": "default border color"
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "{color.neutral.700}",
+        "$description": "when hovering or pressing on an element using default border color."
+      },
+      "selected": {
+        "$type": "color",
+        "$value": "{color.blue.600}",
+        "$description": "element is selected, active."
+      },
+      "light": {
+        "$type": "color",
+        "$value": "{color.neutral.50}",
+        "$description": "light border color"
+      },
+      "active": {
+        "$type": "color",
+        "$value": "{color.cyan.500}",
+        "$description": "for active state of search, selector."
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "{color.neutral.50}",
+        "$description": "disabled stroke"
+      },
+      "onAccent": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$description": "secondary buttons border on accent background"
+      },
+      "focused": {
+        "$type": "color",
+        "$value": "{color.yellow.200}",
+        "$description": "border color for focus ring"
+      }
+    }
+  },
+  "spacing": {
+    "m200": {
+      "$type": "dimension",
+      "$value": "16px"
+    },
+    "xs050": {
+      "$type": "dimension",
+      "$value": "4px"
+    },
+    "s100": {
+      "$type": "dimension",
+      "$value": "8px"
+    },
+    "s150": {
+      "$type": "dimension",
+      "$value": "12px"
+    },
+    "l300": {
+      "$type": "dimension",
+      "$value": "24px"
+    },
+    "l400": {
+      "$type": "dimension",
+      "$value": "32px"
+    },
+    "xl600": {
+      "$type": "dimension",
+      "$value": "48px"
+    },
+    "xl800": {
+      "$type": "dimension",
+      "$value": "64px"
+    },
+    "xl1200": {
+      "$type": "dimension",
+      "$value": "96px"
+    },
+    "xs025": {
+      "$type": "dimension",
+      "$value": "2px"
+    }
+  },
+  "radius": {
+    "default": {
+      "$type": "dimension",
+      "$value": "4px",
+      "$description": "Use for most components in the Bio4C Design system: such as cards, input fields, buttons, search etc..."
+    },
+    "modal": {
+      "$type": "dimension",
+      "$value": "8px",
+      "$description": "Use for modals, bottom sheets, left or right panels. Basically it is mostly used for large content zone in the interface."
+    },
+    "full": {
+      "$type": "dimension",
+      "$value": "999px",
+      "$description": "Use for circular action buttons, chips, tags. These full rounded shapes communicate a specific behavior. The full rounded radius should not be used for cosmetic purposes."
+    }
+  },
+  "border": {
+    "default": {
+      "$type": "dimension",
+      "$value": "1px",
+      "$description": "Use as the default value for most of the elements such as dividers, input fields, cards, tables, tags etc..."
+    },
+    "large": {
+      "$type": "dimension",
+      "$value": "2px",
+      "$description": "Use to emphasize actions elements such as buttons and tabs."
+    }
+  },
+  "opacity": {
+    "disabled": {
+      "$type": "dimension",
+      "$value": "0.4",
+      "$description": "Applies to element to should appear disabled"
+    },
+    "overlay": {
+      "$type": "dimension",
+      "$value": "0.25",
+      "$description": "Applies to overlay that should allow see through like a loading overlay or a modal overlay"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+import {Meta} from "@storybook/blocks";
+import designTokens from '../assets/designTokens.json';
+
+export function AliasBorder({tokens}) {
+  return Object.values(tokens).map((token) => (
+    <div key={token.name}>
+      <div style={{display: 'flex', flexDirection: 'row', gap: '20px'}}>
+        <div style={{
+          borderColor: '#0f69af',
+          borderStyle: 'solid',
+          borderWidth: token.value,
+          width: '80px',
+          height: '80px',
+          borderRadius: '8px',
+          boxShadow: '#0f1a2e26 0px 1px 2px 0px',
+          flexGrow: '0',
+          flexShrink: '0'
+        }}>
+        </div>
+        <div>
+          <strong>Token:</strong> <code>{token.name}</code><br/>
+          <strong>Usage:</strong> {token.description}<br/>
+          <strong>Value:</strong> <code>{token.value}</code>
+        </div>
+      </div>
+      <hr/>
+    </div>
+  ))
+}
+
+export function AliasRadius({tokens}) {
+  return Object.values(tokens).map((token) => (
+    <div key={token.name}>
+      <div style={{display: 'flex', flexDirection: 'row', gap: '20px'}}>
+        <div style={{
+          backgroundColor: '#0f69af',
+          borderRadius: token.value,
+          width: '80px',
+          height: '80px',
+          boxShadow: '#0f1a2e26 0px 1px 2px 0px',
+          flexGrow: '0',
+          flexShrink: '0'
+        }}>
+        </div>
+        <div>
+          <strong>Token:</strong> <code>{token.name}</code><br/>
+          <strong>Usage:</strong> {token.description}<br/>
+          <strong>Value:</strong> <code>{token.value}</code>
+        </div>
+      </div>
+      <hr/>
+    </div>
+  ))
+}
+
+
+<Meta title="Fundamentals/Border Radius"/>
+
+# Borders & Radius
+
+The borders specifications including height and corner radius can help differentiating shapes and give cues on their respective behavior and can also express brand.
+
+## Borders
+
+Border tokens are used to emphasize on some UI elements. A large border can attract the attention of the user on an action element such as a button.
+
+<AliasBorder tokens={designTokens.alias.borders.values}/>
+
+## Radius
+
+Radius tokens are used to give sharp edges a more subtle, rounded effect.
+It can also be used to give a shape to certain UI elements for visual or functional reasons.
+
+<AliasRadius tokens={designTokens.alias.radius.values}/>

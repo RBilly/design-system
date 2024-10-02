@@ -1,0 +1,1024 @@
+{
+  "global": {
+    "colors": {
+      "neutral": {
+        "name": "Neutral",
+        "values": [
+          {
+            "type": "color",
+            "figmaVariable": "color/neutral/10",
+            "name": "colorNeutral10",
+            "value": "#f8f8fc",
+            "modifier": "10"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/neutral/50",
+            "name": "colorNeutral50",
+            "value": "#ececf4",
+            "modifier": "50"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/neutral/100",
+            "name": "colorNeutral100",
+            "value": "#e1e1ea",
+            "modifier": "100"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/neutral/200",
+            "name": "colorNeutral200",
+            "value": "#c7c7d1",
+            "modifier": "200"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/neutral/300",
+            "name": "colorNeutral300",
+            "value": "#a9a9ba",
+            "modifier": "300"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/neutral/700",
+            "name": "colorNeutral700",
+            "value": "#454554",
+            "modifier": "700"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/neutral/900",
+            "name": "colorNeutral900",
+            "value": "#0f192e",
+            "modifier": "900"
+          }
+        ]
+      },
+      "blue": {
+        "name": "Blue",
+        "values": [
+          {
+            "type": "color",
+            "figmaVariable": "color/blue/50",
+            "name": "colorBlue50",
+            "value": "#ecf5fc",
+            "modifier": "50"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/blue/600",
+            "name": "colorBlue600",
+            "value": "#0f69af",
+            "modifier": "600"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/blue/700",
+            "name": "colorBlue700",
+            "value": "#085897",
+            "modifier": "700"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/blue/800",
+            "name": "colorBlue800",
+            "value": "#0a3b61",
+            "modifier": "800"
+          }
+        ]
+      },
+      "cyan": {
+        "name": "Cyan",
+        "values": [
+          {
+            "type": "color",
+            "figmaVariable": "color/cyan/500",
+            "name": "colorCyan500",
+            "value": "#08a3b0",
+            "modifier": "500"
+          }
+        ]
+      },
+      "red": {
+        "name": "Red",
+        "values": [
+          {
+            "type": "color",
+            "figmaVariable": "color/red/100",
+            "name": "colorRed100",
+            "value": "#ffdadc",
+            "modifier": "100"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/red/600",
+            "name": "colorRed600",
+            "value": "#e61e50",
+            "modifier": "600"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/red/800",
+            "name": "colorRed800",
+            "value": "#750c24",
+            "modifier": "800"
+          }
+        ]
+      },
+      "yellow": {
+        "name": "Yellow",
+        "values": [
+          {
+            "type": "color",
+            "figmaVariable": "color/yellow/50",
+            "name": "colorYellow50",
+            "value": "#fff3d9",
+            "modifier": "50"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/yellow/200",
+            "name": "colorYellow200",
+            "value": "#ffc832",
+            "modifier": "200"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/yellow/800",
+            "name": "colorYellow800",
+            "value": "#3d2e0a",
+            "modifier": "800"
+          }
+        ]
+      },
+      "green": {
+        "name": "Green",
+        "values": [
+          {
+            "type": "color",
+            "figmaVariable": "color/green/50",
+            "name": "colorGreen50",
+            "value": "#e6f5e8",
+            "modifier": "50"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/green/500",
+            "name": "colorGreen500",
+            "value": "#009916",
+            "modifier": "500"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/green/800",
+            "name": "colorGreen800",
+            "value": "#00540c",
+            "modifier": "800"
+          }
+        ]
+      },
+      "purple": {
+        "name": "Purple",
+        "values": [
+          {
+            "type": "color",
+            "figmaVariable": "color/purple/500",
+            "name": "colorPurple500",
+            "value": "#8a68d2",
+            "modifier": "500"
+          }
+        ]
+      },
+      "magenta": {
+        "name": "Magenta",
+        "values": [
+          {
+            "type": "color",
+            "figmaVariable": "color/magenta/500",
+            "name": "colorMagenta500",
+            "value": "#eb3c96",
+            "modifier": "500"
+          }
+        ]
+      },
+      "white": {
+        "name": "White",
+        "values": [
+          {
+            "type": "color",
+            "figmaVariable": "color/white",
+            "name": "colorWhite",
+            "value": "#ffffff",
+            "modifier": "white"
+          }
+        ]
+      }
+    },
+    "spacing": {
+      "name": "Spacing",
+      "values": [
+        {
+          "type": "dimension",
+          "figmaVariable": "spacing/m200",
+          "name": "spacingM200",
+          "value": "1rem",
+          "modifier": "m200"
+        },
+        {
+          "type": "dimension",
+          "figmaVariable": "spacing/xs050",
+          "name": "spacingXs050",
+          "value": "0.25rem",
+          "modifier": "xs050"
+        },
+        {
+          "type": "dimension",
+          "figmaVariable": "spacing/s100",
+          "name": "spacingS100",
+          "value": "0.5rem",
+          "modifier": "s100"
+        },
+        {
+          "type": "dimension",
+          "figmaVariable": "spacing/s150",
+          "name": "spacingS150",
+          "value": "0.75rem",
+          "modifier": "s150"
+        },
+        {
+          "type": "dimension",
+          "figmaVariable": "spacing/l300",
+          "name": "spacingL300",
+          "value": "1.5rem",
+          "modifier": "l300"
+        },
+        {
+          "type": "dimension",
+          "figmaVariable": "spacing/l400",
+          "name": "spacingL400",
+          "value": "2rem",
+          "modifier": "l400"
+        },
+        {
+          "type": "dimension",
+          "figmaVariable": "spacing/xl600",
+          "name": "spacingXl600",
+          "value": "3rem",
+          "modifier": "xl600"
+        },
+        {
+          "type": "dimension",
+          "figmaVariable": "spacing/xl800",
+          "name": "spacingXl800",
+          "value": "4rem",
+          "modifier": "xl800"
+        },
+        {
+          "type": "dimension",
+          "figmaVariable": "spacing/xl1200",
+          "name": "spacingXl1200",
+          "value": "6rem",
+          "modifier": "xl1200"
+        },
+        {
+          "type": "dimension",
+          "figmaVariable": "spacing/xs025",
+          "name": "spacingXs025",
+          "value": "0.125rem",
+          "modifier": "xs025"
+        }
+      ]
+    },
+    "typography": {
+      "heading": {
+        "name": "Heading",
+        "values": [
+          {
+            "type": "typography",
+            "figmaVariable": "typography/heading/h1",
+            "name": "typographyHeadingH1",
+            "value": {
+              "fontFamily": "\"Noto Sans Display\", \"Noto Sans SC\", \"Noto Sans JP\", \"Noto Sans KR\", sans-serif",
+              "fontSize": "32px",
+              "fontWeight": 500,
+              "letterSpacing": "0%",
+              "lineHeight": "40px",
+              "textTransform": "none",
+              "textDecoration": "none"
+            },
+            "modifier": "h1"
+          },
+          {
+            "type": "typography",
+            "figmaVariable": "typography/heading/h2",
+            "name": "typographyHeadingH2",
+            "value": {
+              "fontFamily": "\"Noto Sans Display\", \"Noto Sans SC\", \"Noto Sans JP\", \"Noto Sans KR\", sans-serif",
+              "fontSize": "24px",
+              "fontWeight": 500,
+              "letterSpacing": "0%",
+              "lineHeight": "32px",
+              "textTransform": "none",
+              "textDecoration": "none"
+            },
+            "modifier": "h2"
+          },
+          {
+            "type": "typography",
+            "figmaVariable": "typography/heading/h3",
+            "name": "typographyHeadingH3",
+            "value": {
+              "fontFamily": "\"Noto Sans Display\", \"Noto Sans SC\", \"Noto Sans JP\", \"Noto Sans KR\", sans-serif",
+              "fontSize": "18px",
+              "fontWeight": 500,
+              "letterSpacing": "0%",
+              "lineHeight": "24px",
+              "textTransform": "none",
+              "textDecoration": "none"
+            },
+            "modifier": "h3"
+          },
+          {
+            "type": "typography",
+            "figmaVariable": "typography/heading/h4",
+            "name": "typographyHeadingH4",
+            "value": {
+              "fontFamily": "\"Noto Sans Display\", \"Noto Sans SC\", \"Noto Sans JP\", \"Noto Sans KR\", sans-serif",
+              "fontSize": "16px",
+              "fontWeight": 600,
+              "letterSpacing": "0%",
+              "lineHeight": "24px",
+              "textTransform": "none",
+              "textDecoration": "none"
+            },
+            "modifier": "h4"
+          },
+          {
+            "type": "typography",
+            "figmaVariable": "typography/heading/h5",
+            "name": "typographyHeadingH5",
+            "value": {
+              "fontFamily": "\"Noto Sans Display\", \"Noto Sans SC\", \"Noto Sans JP\", \"Noto Sans KR\", sans-serif",
+              "fontSize": "14px",
+              "fontWeight": 600,
+              "letterSpacing": "0%",
+              "lineHeight": "20px",
+              "textTransform": "none",
+              "textDecoration": "none"
+            },
+            "modifier": "h5"
+          },
+          {
+            "type": "typography",
+            "figmaVariable": "typography/heading/h6",
+            "name": "typographyHeadingH6",
+            "value": {
+              "fontFamily": "\"Noto Sans Display\", \"Noto Sans SC\", \"Noto Sans JP\", \"Noto Sans KR\", sans-serif",
+              "fontSize": "12px",
+              "fontWeight": 600,
+              "letterSpacing": "0%",
+              "lineHeight": "16px",
+              "textTransform": "none",
+              "textDecoration": "none"
+            },
+            "modifier": "h6"
+          }
+        ]
+      },
+      "body": {
+        "name": "Body",
+        "values": [
+          {
+            "type": "typography",
+            "figmaVariable": "typography/body/medium",
+            "name": "typographyBodyMedium",
+            "value": {
+              "fontFamily": "\"Noto Sans Display\", \"Noto Sans SC\", \"Noto Sans JP\", \"Noto Sans KR\", sans-serif",
+              "fontSize": "16px",
+              "fontWeight": 400,
+              "letterSpacing": "0%",
+              "lineHeight": "24px",
+              "textTransform": "none",
+              "textDecoration": "none"
+            },
+            "modifier": "medium"
+          },
+          {
+            "type": "typography",
+            "figmaVariable": "typography/body/small",
+            "name": "typographyBodySmall",
+            "value": {
+              "fontFamily": "\"Noto Sans Display\", \"Noto Sans SC\", \"Noto Sans JP\", \"Noto Sans KR\", sans-serif",
+              "fontSize": "14px",
+              "fontWeight": 400,
+              "letterSpacing": "0%",
+              "lineHeight": "20px",
+              "textTransform": "none",
+              "textDecoration": "none"
+            },
+            "modifier": "small"
+          },
+          {
+            "type": "typography",
+            "figmaVariable": "typography/body/xs",
+            "name": "typographyBodyXs",
+            "value": {
+              "fontFamily": "\"Noto Sans Display\", \"Noto Sans SC\", \"Noto Sans JP\", \"Noto Sans KR\", sans-serif",
+              "fontSize": "12px",
+              "fontWeight": 400,
+              "letterSpacing": "0%",
+              "lineHeight": "16px",
+              "textTransform": "none",
+              "textDecoration": "none"
+            },
+            "modifier": "xs"
+          }
+        ]
+      },
+      "label": {
+        "name": "Label",
+        "values": [
+          {
+            "type": "typography",
+            "figmaVariable": "typography/label/xl",
+            "name": "typographyLabelXl",
+            "value": {
+              "fontFamily": "\"Noto Sans Display\", \"Noto Sans SC\", \"Noto Sans JP\", \"Noto Sans KR\", sans-serif",
+              "fontSize": "18px",
+              "fontWeight": 500,
+              "letterSpacing": "0%",
+              "lineHeight": "24px",
+              "textTransform": "none",
+              "textDecoration": "none"
+            },
+            "modifier": "xl"
+          },
+          {
+            "type": "typography",
+            "figmaVariable": "typography/label/large",
+            "name": "typographyLabelLarge",
+            "value": {
+              "fontFamily": "\"Noto Sans Display\", \"Noto Sans SC\", \"Noto Sans JP\", \"Noto Sans KR\", sans-serif",
+              "fontSize": "16px",
+              "fontWeight": 600,
+              "letterSpacing": "0%",
+              "lineHeight": "24px",
+              "textTransform": "none",
+              "textDecoration": "none"
+            },
+            "modifier": "large"
+          },
+          {
+            "type": "typography",
+            "figmaVariable": "typography/label/medium",
+            "name": "typographyLabelMedium",
+            "value": {
+              "fontFamily": "\"Noto Sans Display\", \"Noto Sans SC\", \"Noto Sans JP\", \"Noto Sans KR\", sans-serif",
+              "fontSize": "14px",
+              "fontWeight": 500,
+              "letterSpacing": "0%",
+              "lineHeight": "20px",
+              "textTransform": "none",
+              "textDecoration": "none"
+            },
+            "modifier": "medium"
+          },
+          {
+            "type": "typography",
+            "figmaVariable": "typography/label/small",
+            "name": "typographyLabelSmall",
+            "value": {
+              "fontFamily": "\"Noto Sans Display\", \"Noto Sans SC\", \"Noto Sans JP\", \"Noto Sans KR\", sans-serif",
+              "fontSize": "12px",
+              "fontWeight": 500,
+              "letterSpacing": "0%",
+              "lineHeight": "16px",
+              "textTransform": "uppercase",
+              "textDecoration": "none"
+            },
+            "modifier": "small"
+          }
+        ]
+      }
+    }
+  },
+  "alias": {
+    "colors": {
+      "text": {
+        "name": "Text",
+        "values": [
+          {
+            "type": "color",
+            "figmaVariable": "color/text/primary",
+            "description": "title, body copy, sentence case headers.",
+            "name": "colorTextPrimary",
+            "value": "color/neutral/900",
+            "modifier": "primary"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/text/secondary",
+            "description": "subtitle, paragraph copy, conditions line.",
+            "name": "colorTextSecondary",
+            "value": "color/neutral/700",
+            "modifier": "secondary"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/text/tertiary",
+            "description": "disabled element, field input placeholder.",
+            "name": "colorTextTertiary",
+            "value": "color/neutral/300",
+            "modifier": "tertiary"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/text/onAccent",
+            "description": "when text is on blue default background (ex: button)",
+            "name": "colorTextOnAccent",
+            "value": "color/white",
+            "modifier": "onAccent"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/text/link/default",
+            "description": "text link (not within a button container)",
+            "name": "colorTextLinkDefault",
+            "value": "color/blue/600",
+            "modifier": "default"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/text/link/pressed",
+            "description": "text link hover + pressed states",
+            "name": "colorTextLinkPressed",
+            "value": "color/blue/800",
+            "modifier": "pressed"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/text/link/hovered",
+            "description": "text link hovered",
+            "name": "colorTextLinkHovered",
+            "value": "color/blue/700",
+            "modifier": "hovered"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/text/onDanger",
+            "description": "danger or negative message (ex: alarms)",
+            "name": "colorTextOnDanger",
+            "value": "color/red/800",
+            "modifier": "onDanger"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/text/onWarning",
+            "description": "warning message (ex: alarms)",
+            "name": "colorTextOnWarning",
+            "value": "color/yellow/800",
+            "modifier": "onWarning"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/text/onSuccess",
+            "description": "success or positive message.",
+            "name": "colorTextOnSuccess",
+            "value": "color/green/800",
+            "modifier": "onSuccess"
+          }
+        ]
+      },
+      "background": {
+        "name": "Background",
+        "values": [
+          {
+            "type": "color",
+            "figmaVariable": "color/background/default",
+            "description": "page, modal, dialogs, dropdown menus.",
+            "name": "colorBackgroundDefault",
+            "value": "color/white",
+            "modifier": "default"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/background/hovered",
+            "description": "mouse-hover for default white background",
+            "name": "colorBackgroundHovered",
+            "value": "color/neutral/50",
+            "modifier": "hovered"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/background/container",
+            "description": "search, input fields, cards, content zone (example: graph). Containers are always above the default background on the z-index axis.",
+            "name": "colorBackgroundContainer",
+            "value": "color/neutral/10",
+            "modifier": "container"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/background/pressed",
+            "description": "mouse-hover for container",
+            "name": "colorBackgroundPressed",
+            "value": "color/neutral/100",
+            "modifier": "pressed"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/background/brand",
+            "description": "navigation, main CTA",
+            "name": "colorBackgroundBrand",
+            "value": "color/blue/600",
+            "modifier": "brand"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/background/brandHover",
+            "description": "mouse-hover for elements using blue brand background.",
+            "name": "colorBackgroundBrandHover",
+            "value": "color/blue/700",
+            "modifier": "brandHover"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/background/selected",
+            "description": "selected elements, informative banner message.",
+            "name": "colorBackgroundSelected",
+            "value": "color/blue/50",
+            "modifier": "selected"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/background/danger",
+            "description": "critical, important message to communicate",
+            "name": "colorBackgroundDanger",
+            "value": "color/red/100",
+            "modifier": "danger"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/background/warning",
+            "description": "warning message to communicate.",
+            "name": "colorBackgroundWarning",
+            "value": "color/yellow/50",
+            "modifier": "warning"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/background/success",
+            "description": "success, positive message to communicate.",
+            "name": "colorBackgroundSuccess",
+            "value": "color/green/50",
+            "modifier": "success"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/background/containerDarker",
+            "description": "on top of container background in the UI. For scroll bars.",
+            "name": "colorBackgroundContainerDarker",
+            "value": "color/neutral/50",
+            "modifier": "containerDarker"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/background/brandPressed",
+            "description": "Pressed state for elements using blue brand background.",
+            "name": "colorBackgroundBrandPressed",
+            "value": "color/blue/800",
+            "modifier": "brandPressed"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/background/overlay",
+            "description": "background overlay behind a modal",
+            "name": "colorBackgroundOverlay",
+            "value": "color/neutral/900",
+            "modifier": "overlay"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/background/sunken",
+            "description": "Use for background of lowest elevation layers. A sunken surface can be used to group items such as cards.",
+            "name": "colorBackgroundSunken",
+            "value": "color/neutral/100",
+            "modifier": "sunken"
+          }
+        ]
+      },
+      "accent": {
+        "name": "Accent",
+        "values": [
+          {
+            "type": "color",
+            "figmaVariable": "color/accent/primary",
+            "description": "navigation, clickable and selected elements (Ex: tabs, checkbox, radio...)",
+            "name": "colorAccentPrimary",
+            "value": "color/blue/600",
+            "modifier": "primary"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/accent/secondary",
+            "description": "decorative for icons, illustrations, graphs... Use as accent color of elements when background is default blue.",
+            "name": "colorAccentSecondary",
+            "value": "color/cyan/500",
+            "modifier": "secondary"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/accent/danger",
+            "description": "tags, icons, shapes for important or critical message to communicate.",
+            "name": "colorAccentDanger",
+            "value": "color/red/600",
+            "modifier": "danger"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/accent/warning",
+            "description": "tags, icons, shapes for warning message.",
+            "name": "colorAccentWarning",
+            "value": "color/yellow/200",
+            "modifier": "warning"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/accent/success",
+            "description": "tags, icons, shapes for positive message.",
+            "name": "colorAccentSuccess",
+            "value": "color/green/500",
+            "modifier": "success"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/accent/purple",
+            "description": "For graphs only.",
+            "name": "colorAccentPurple",
+            "value": "color/purple/500",
+            "modifier": "purple"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/accent/magenta",
+            "description": "For graphs only.",
+            "name": "colorAccentMagenta",
+            "value": "color/magenta/500",
+            "modifier": "magenta"
+          }
+        ]
+      },
+      "icon": {
+        "name": "Icon",
+        "values": [
+          {
+            "type": "color",
+            "figmaVariable": "color/icon/primary",
+            "description": "primary color when the icon support an information, or is clickable among other clickable icons.",
+            "name": "colorIconPrimary",
+            "value": "color/neutral/700",
+            "modifier": "primary"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/icon/decorative",
+            "description": "Use for decorative icons to highlight information and add a touch of style.",
+            "name": "colorIconDecorative",
+            "value": "color/cyan/500",
+            "modifier": "decorative"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/icon/disabled",
+            "description": "disabled icons",
+            "name": "colorIconDisabled",
+            "value": "color/neutral/300",
+            "modifier": "disabled"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/icon/onAccent",
+            "description": "when icon is on an accent color background (ex: button)",
+            "name": "colorIconOnAccent",
+            "value": "color/white",
+            "modifier": "onAccent"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/icon/brand",
+            "description": "icon on white background such as within button",
+            "name": "colorIconBrand",
+            "value": "color/blue/600",
+            "modifier": "brand"
+          }
+        ]
+      },
+      "border": {
+        "name": "Border",
+        "values": [
+          {
+            "type": "color",
+            "figmaVariable": "color/border/default",
+            "description": "default border color",
+            "name": "colorBorderDefault",
+            "value": "color/neutral/200",
+            "modifier": "default"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/border/hover",
+            "description": "when hovering or pressing on an element using default border color.",
+            "name": "colorBorderHover",
+            "value": "color/neutral/700",
+            "modifier": "hover"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/border/selected",
+            "description": "element is selected, active.",
+            "name": "colorBorderSelected",
+            "value": "color/blue/600",
+            "modifier": "selected"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/border/light",
+            "description": "light border color",
+            "name": "colorBorderLight",
+            "value": "color/neutral/50",
+            "modifier": "light"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/border/active",
+            "description": "for active state of search, selector.",
+            "name": "colorBorderActive",
+            "value": "color/cyan/500",
+            "modifier": "active"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/border/disabled",
+            "description": "disabled stroke",
+            "name": "colorBorderDisabled",
+            "value": "color/neutral/50",
+            "modifier": "disabled"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/border/onAccent",
+            "description": "secondary buttons border on accent background",
+            "name": "colorBorderOnAccent",
+            "value": "color/white",
+            "modifier": "onAccent"
+          },
+          {
+            "type": "color",
+            "figmaVariable": "color/border/focused",
+            "description": "border color for focus ring",
+            "name": "colorBorderFocused",
+            "value": "color/yellow/200",
+            "modifier": "focused"
+          }
+        ]
+      }
+    },
+    "radius": {
+      "name": "Radius",
+      "values": [
+        {
+          "type": "dimension",
+          "figmaVariable": "radius/default",
+          "description": "Use for most components in the Bio4C Design system: such as cards, input fields, buttons, search etc...",
+          "name": "radiusDefault",
+          "value": "4px",
+          "modifier": "default"
+        },
+        {
+          "type": "dimension",
+          "figmaVariable": "radius/modal",
+          "description": "Use for modals, bottom sheets, left or right panels. Basically it is mostly used for large content zone in the interface.",
+          "name": "radiusModal",
+          "value": "8px",
+          "modifier": "modal"
+        },
+        {
+          "type": "dimension",
+          "figmaVariable": "radius/full",
+          "description": "Use for circular action buttons, chips, tags. These full rounded shapes communicate a specific behavior. The full rounded radius should not be used for cosmetic purposes.",
+          "name": "radiusFull",
+          "value": "999px",
+          "modifier": "full"
+        }
+      ]
+    },
+    "borders": {
+      "name": "Border",
+      "values": [
+        {
+          "type": "dimension",
+          "figmaVariable": "border/default",
+          "description": "Use as the default value for most of the elements such as dividers, input fields, cards, tables, tags etc...",
+          "name": "borderDefault",
+          "value": "1px",
+          "modifier": "default"
+        },
+        {
+          "type": "dimension",
+          "figmaVariable": "border/large",
+          "description": "Use to emphasize actions elements such as buttons and tabs.",
+          "name": "borderLarge",
+          "value": "2px",
+          "modifier": "large"
+        }
+      ]
+    },
+    "opacity": {
+      "name": "Opacity",
+      "values": [
+        {
+          "type": "dimension",
+          "figmaVariable": "opacity/disabled",
+          "description": "Applies to element to should appear disabled",
+          "name": "opacityDisabled",
+          "value": "0.4",
+          "modifier": "disabled"
+        },
+        {
+          "type": "dimension",
+          "figmaVariable": "opacity/overlay",
+          "description": "Applies to overlay that should allow see through like a loading overlay or a modal overlay",
+          "name": "opacityOverlay",
+          "value": "0.25",
+          "modifier": "overlay"
+        }
+      ]
+    },
+    "shadows": {
+      "name": "Shadows",
+      "values": [
+        {
+          "rawValue": {
+            "offsetX": "0px",
+            "offsetY": "1px",
+            "blur": "2px",
+            "spread": "0px",
+            "color": "#0f1a2e26"
+          },
+          "type": "shadow",
+          "figmaVariable": "shadows/raised",
+          "description": "Use for cards and other elements that needs to be slightly raised over content layer to draw user attention but should not go over other elements in the UI.",
+          "name": "shadowsRaised",
+          "value": "0px 1px 2px 0px #0f1a2e26",
+          "modifier": "raised"
+        },
+        {
+          "rawValue": {
+            "offsetX": "0px",
+            "offsetY": "4px",
+            "blur": "4px",
+            "spread": "0px",
+            "color": "#00000040"
+          },
+          "type": "shadow",
+          "figmaVariable": "shadows/overflow",
+          "description": "Use to create a shadow when content scrolls under other content.",
+          "name": "shadowsOverflow",
+          "value": "0px 4px 4px 0px #00000040",
+          "modifier": "overflow"
+        },
+        {
+          "rawValue": {
+            "offsetX": "0px",
+            "offsetY": "16px",
+            "blur": "32px",
+            "spread": "0px",
+            "color": "#0f1a2e26"
+          },
+          "type": "shadow",
+          "figmaVariable": "shadows/overlay",
+          "description": "Use for elements that sit on top of the UI such as dialog, modal, dropdown menu and whenever it requires full attention of the user on the element. User is not able to interact with what is behind.",
+          "name": "shadowsOverlay",
+          "value": "0px 16px 32px 0px #0f1a2e26",
+          "modifier": "overlay"
+        },
+        {
+          "rawValue": {
+            "offsetX": "0px",
+            "offsetY": "1px",
+            "blur": "2px",
+            "spread": "0px",
+            "color": "#0f1a2e26",
+            "inset": true
+          },
+          "type": "shadow",
+          "figmaVariable": "shadows/sunken",
+          "description": "Use to create a shadow when an element is sunk below the current surface.",
+          "name": "shadowsSunken",
+          "value": "0px 1px 2px 0px #0f1a2e26 inset",
+          "modifier": "sunken"
+        }
+      ]
+    }
+  }
+}

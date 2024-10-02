@@ -1,0 +1,17 @@
+// Generated file. Do not edit directly.
+import type { IconProps } from './IconProps';
+import {{name}} from '{{importPath}}';
+import { SIZE_MAP } from './utils';
+
+export function {{componentName}}({ size = 'medium', className, style }: IconProps) {
+const sizeInPx = SIZE_MAP[size];
+
+return (
+<{{name}}
+width={sizeInPx}
+height={sizeInPx}
+className={className}
+style={style}
+/>
+);
+}

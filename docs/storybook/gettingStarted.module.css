@@ -1,0 +1,47 @@
+.admonition {
+  border: 1px solid #eaeaea;
+  border-left: 5px solid;
+  border-radius: 5px;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.admonition.warning {
+  background-color: #fff3d9;
+  border-left-color: #ffc832;
+}
+
+.admonition.danger {
+  background-color: #ffdadc;
+  border-left-color: #e61e50;
+}
+
+.tab {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+
+  &[data-selected] {
+    border: 1px solid #eaeaea;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    background-color: #ecf5fc;
+  }
+
+  &:not([data-selected]):hover {
+    border: 0 solid #eaeaea;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    background-color: #e1e1ea;
+  }
+}
+
+.tab-list {
+  display: flex;
+}
+
+.tab-panel {
+  border: 1px solid #eaeaea;
+  border-radius: 0 5px 5px 5px;
+  padding: 1rem 2rem 0 2rem;
+  background-color: #ecf5fc;
+}

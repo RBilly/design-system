@@ -1,0 +1,116 @@
+{
+  "color": {
+    "neutral": {
+      "10": {
+        "$type": "color",
+        "$value": "#f8f8fc"
+      },
+      "50": {
+        "$type": "color",
+        "$value": "#ececf4"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#e1e1ea"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#c7c7d1"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#a9a9ba"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#454554"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#0f192e"
+      }
+    },
+    "blue": {
+      "50": {
+        "$type": "color",
+        "$value": "#ecf5fc"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#0f69af"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#085897"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#0a3b61"
+      }
+    },
+    "cyan": {
+      "500": {
+        "$type": "color",
+        "$value": "#08a3b0"
+      }
+    },
+    "red": {
+      "100": {
+        "$type": "color",
+        "$value": "#ffdadc"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#e61e50"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#750c24"
+      }
+    },
+    "yellow": {
+      "50": {
+        "$type": "color",
+        "$value": "#fff3d9"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#ffc832"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#3d2e0a"
+      }
+    },
+    "green": {
+      "50": {
+        "$type": "color",
+        "$value": "#e6f5e8"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#009916"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#00540c"
+      }
+    },
+    "purple": {
+      "500": {
+        "$type": "color",
+        "$value": "#8a68d2"
+      }
+    },
+    "magenta": {
+      "500": {
+        "$type": "color",
+        "$value": "#eb3c96"
+      }
+    },
+    "white": {
+      "$type": "color",
+      "$value": "#ffffff"
+    }
+  }
+}

@@ -1,0 +1,143 @@
+import LinkTo from '@storybook/addon-links/react';
+import {ColorItem, ColorPalette, Meta, Source} from '@storybook/blocks';
+import designTokens from '../assets/designTokens.json';
+import style from "./gettingStarted.module.css";
+
+export const globalColorsTokens = {};
+
+export function formatColors(colors) {
+  return colors.reduce(
+    (accu, color) => ({
+      ...accu,
+      [color.modifier]: color.value
+    }),
+    {}
+  );
+}
+
+export function getColorFromGlobalTokens(aliasToken) {
+  return Object.values(designTokens.global.colors).flatMap((color) => color.values).find((color) => color.figmaVariable === aliasToken);
+}
+
+export function getColor(aliasToken) {
+  globalColorsTokens[aliasToken] ??= getColorFromGlobalTokens(aliasToken);
+  return globalColorsTokens[aliasToken];
+}
+
+export function AliasColors({colors}) {
+  return Object.values(colors).map((color) => (
+    <div key={color.name}>
+      <h3>{color.name}</h3>
+      {color.values.map(token => {
+        const globalColor = getColor(token.value);
+        return (
+          <div key={token.name}>
+            <div style={{display: 'flex', flexDirection: 'row', gap: '20px'}}>
+              <div style={{
+                backgroundColor: globalColor.value,
+                width: '250px',
+                height: '80px',
+                borderRadius: '8px',
+                boxShadow: '#0f1a2e26 0px 1px 2px 0px',
+                flexGrow: '0',
+                flexShrink: '0'
+              }}>
+                <div style={{
+                  backgroundColor: '#000000',
+                  borderRadius: '4px 0 0 4px',
+                  padding: '5px',
+                  fontSize: '12px',
+                  color: 'white',
+                  opacity: '0.6',
+                  width: '60px',
+                  height: '18px',
+                  textAlign: 'center',
+                  position: 'relative',
+                  top: '50%',
+                  float: 'right'
+                }}>{globalColor.value}</div>
+              </div>
+              <div>
+                <strong>Token:</strong> <code>{token.name}</code><br/>
+                <strong>Usage:</strong> {token.description}<br/>
+                <strong>Global token:</strong> <code>{globalColor.figmaVariable}</code>
+              </div>
+            </div>
+            <hr/>
+          </div>
+        )
+      })}
+    </div>
+  ))
+}
+
+<Meta title="Fundamentals/Colors"/>
+
+# Colors
+
+Use color to create meaningful experiences while also expressing hierarchy, state, and brand identity.
+
+## Principles
+
+To help you use colors token, follow our color principles.
+
+### Intent communication over aesthetics
+
+Although we value an aesthetically pleasing use of colors, we place a higher value on clear communication.
+Colors supports the purpose of the content, communicating things like hierarchy of information, interactive states, and the difference between distinct elements.
+
+### Colors meaning
+
+Colors have assigned roles in our design system.
+They're used to convey a specific meaning or function based within our interfaces.
+Defined color roles make things easy to modify and customise later.
+
+## Global Colors Palette
+
+<div className={[style.admonition, style.warning].join(' ')}>
+  **⚠️** Avoid consuming *global tokens* directly, use *alias tokens* instead.
+</div>
+
+<ColorPalette style={{marginTop: '2rem'}}>
+  {Object.values(designTokens.global.colors).map((color) => (
+    <ColorItem
+      key={color.name}
+      title={color.name}
+      subtitle={""}
+      colors={formatColors(color.values)}
+    />
+  ))}
+</ColorPalette>
+
+## Alias Colors
+
+<AliasColors colors={designTokens.alias.colors}/>
+
+## Usage
+
+### SCSS
+
+In SCSS, the token name needs to be prefixed by `$` to be used.
+
+<Source dark language="css" code={`
+@use '@bio4c/ui-kit/designTokens';
+
+p {
+  color: designTokens.$colorBorderFocused;
+}
+`}/>
+
+### JavaScript
+
+<Source dark language="js" code={`
+import { designTokens } from '@bio4c/ui-kit';
+
+const paragraphStyles = {
+  color: designTokens.colorBorderFocused
+};
+`}/>
+
+## Resources
+
+* <LinkTo kind="Fundamentals/Design Tokens" story="docs">Fundamentals / Design Tokens</LinkTo>
+* [[Figma] Bio4C Design System / Fundamentals / Colors](https://www.figma.com/file/Svp4Vqs9rU5iJViXL3ARfC/%5BDS%5D-Fundamentals-v0.1.0?type=design&node-id=346-18399&mode=design&t=lBSvA8lHo9TsGdBn-0)

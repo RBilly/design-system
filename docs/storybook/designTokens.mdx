@@ -1,0 +1,350 @@
+import LinkTo from '@storybook/addon-links/react';
+import {Meta, Source} from '@storybook/blocks';
+import {Fragment} from 'react';
+import designTokens from '../assets/designTokens.json';
+import isolationImage from '../assets/design-tokens-isolation.png';
+import style from "./gettingStarted.module.css";
+
+export const colorStyle = {};
+export function TokensTableRow({
+                                 description,
+                                 figmaVariable,
+                                 token,
+                                 value,
+                                 example
+                               }) {
+  return (
+    <tr>
+      <td>
+        <code>{token}</code>
+      </td>
+      {!!description && <td>{description}</td>}
+      <td>
+        <code>{figmaVariable}</code>
+      </td>
+      <td>
+        <code>{value}</code>
+      </td>
+      {example && <td style={{padding: '0', height: '1px'}}>{example}</td>}
+    </tr>
+  );
+}
+
+export function formatTokenValue({type, value, rawValue}) {
+  let modifiedValue = rawValue || value;
+  if (type === 'typography') {
+    const {fontFamily, ...truncValue} = value;
+    modifiedValue = truncValue;
+  }
+  return (typeof modifiedValue == 'object')
+    ? JSON.stringify(modifiedValue, null, 2)
+    : modifiedValue;
+}
+
+export function styleColorToken({figmaVariable, value}) {
+  const style = {
+    width: '100%',
+    height: '100%'
+  };
+  let color = value;
+  if (!value.startsWith('#')) {
+    color = colorStyle[value];
+  } else {
+    colorStyle[figmaVariable] = value;
+  }
+  style.backgroundColor = color;
+  return style;
+}
+
+export function TokensTable({tokens, exampleTemplate}) {
+  return (
+    <table style={{width: '100%'}}>
+      <thead>
+      <tr>
+        <th>Token</th>
+        {!!tokens[0].description && <th>Description</th>}
+        <th>Figma</th>
+        <th>Value</th>
+        {exampleTemplate && <th>Example</th>}
+      </tr>
+      </thead>
+      <tbody>
+      {tokens.map(token => (
+        <TokensTableRow
+          key={token.figmaVariable}
+          {...token}
+          token={token.name}
+          value={formatTokenValue(token)}
+          example={exampleTemplate?.(token)}
+        />
+      ))}
+      </tbody>
+    </table>
+  );
+}
+
+export function TokensWithSubCategories({subCategories, exampleTemplate}) {
+  return Object.values(subCategories).map((subCategory) => (
+    <Fragment key={subCategory.name}>
+      <h5>{subCategory.name}</h5>
+      <TokensTable tokens={subCategory.values} exampleTemplate={exampleTemplate}/>
+    </Fragment>
+  ));
+}
+
+export function Accordion({children, title}) {
+  return (
+    <details>
+      <summary style={{cursor: 'pointer'}}>
+        <h4 style={{display: 'inline-block', cursor: 'pointer'}}>{title}</h4>
+      </summary>
+      {children}
+    </details>
+  );
+}
+
+<Meta title="Fundamentals/Design Tokens"/>
+
+# Design Tokens
+
+Design Tokens store design decisions within our Foundations, enabling us to apply them consistently throughout designs, products, code and platforms.
+
+## Definition
+
+Design tokens are the visual design atoms of the design system — specifically, they are named entities that store visual design attributes.
+
+We use them in place of hard-coded values (such as hex values for color or pixel values for spacing) in order to maintain a scalable and consistent visual system for UI development.
+
+A token is formed by two elements, the token name (such as `colorGreen500`) and the associated value (`#009916`).
+
+The difference between **Design Tokens** and other design variables lies in the fact that they provide an additional abstract layer which ensures they are platform-agnostic.
+
+The naming conventions given to these layers create a common language for design properties (colour, spacing, elevation…) that can be used within all platforms and implementation frameworks.
+
+## Types of tokens
+
+There are three different types of token:
+
+* **Global tokens**: primitive values
+* **Alias tokens**: context specific and reference global tokens
+* **Component-specific tokens**: unique and specific design decisions associated with a particular component (reference global tokens or alias tokens ideally)
+
+### Level of isolation
+
+Token types can also be described as levels:
+
+* **Level 1**: global tokens
+* **Level 2**: alias tokens
+* **Level 3**: component-specific tokens
+
+The higher the level, the higher the isolation level of the design token.
+It means that using a design token with a low level of isolation will have a huge impact on the interface if this token is changed in the future.
+
+The following schema shows the level of isolation of each type of tokens and the impact for a change on a given level:
+
+<img
+  alt="Tokens level of isolation"
+  src={isolationImage}
+  style={{
+    display: 'block',
+    maxWidth: 600,
+    margin: '0 auto'
+  }}
+/>
+
+<div className={[style.admonition, style.warning].join(' ')}>
+  **⚠️** Component-specific tokens are not used in the Bio4C Design System. See
+  [SBB](https://wiki.merckgroup.com/confluence/display/PAD/SBB+-+Design+tokens#SBBDesigntokens-Whataboutcomponent-specifictokens?)
+  to find out more.
+</div>
+
+
+### Global Tokens
+
+Global tokens are the primitive values. They are the base-level tokens we use as token value for Alias Tokens.
+
+These tokens are both context-agnostic (the name should not reflect any use case context) and value-descriptive (the name should reflect the value of that token).
+
+**Global Token key concepts:**
+
+* They represent foundation building blocks
+* Their naming should be value-specific
+* Their naming should not be context-specific
+* Their names should be the same across brands and themes
+* When possible, they should contain only one value
+
+For example the token `colorGreen500` with value `#009916` is a global token.
+
+### Alias Tokens
+
+Alias tokens are second level of tokens and are related to a particular use case that helps express a purpose and provide context.
+
+An alias token should be singular in their intended purpose, meaning they should relate only to one use case.
+
+**Alias Token key concepts:**
+
+* They hold design decisions
+* They can be made up of one or multiple Global Tokens
+* Their naming should be descriptive or semantic
+* Their names should be the same across brands and themes
+* They minimise future manual maintenance for products
+* They allow easy, scalable theming
+
+For example the token `colorAccentSuccess` with value `colorGreen500` is an alias token that should be used to inform user with a positive feedback message.
+
+## Importance of Design Tokens
+
+Tokens enable our design system to have a single source of truth. They constitute a shared repository where we store and track style choices and design changes.
+
+Using Design Tokens in both design and implementation means that style updates will be applied consistently in all our products.
+
+### Tokens enhance flexibility
+
+Tokens are used to replace hard-coded values, which enables designers to create more flexible and consistent design solutions.
+Design Tokens provide a way for designers to keep complete control over the atomic values used within the design system.
+
+When a value needs to be updated, this can be done in a single place (Figma in our case), and the new changes will be applied globally across multiple platforms.
+
+### Tokens promote consistency
+
+Design tokens allow us to maintain a unified look and feel across our products and themes, helping product teams apply design decisions swiftly and with confidence. They also help keep our Foundations values in sync for every platform.
+
+### Tokens simplify development
+
+Developers only needs to follow guidelines to know which token to use for which use case or context, and do not need to worry about consistency of styles and design.
+
+## Usage
+
+### SCSS
+
+In SCSS, the token name needs to be prefixed by `$` to be used.
+
+<Source dark language="css" code={`
+@use '@bio4c/ui-kit/designTokens';
+
+p {
+  color: designTokens.$colorNeutral10;
+}
+`}/>
+
+### JavaScript
+
+<Source dark language="js" code={`
+import { designTokens } from '@bio4c/ui-kit';
+
+const paragraphStyles = {
+  color: designTokens.colorNeutral10
+};
+`}/>
+
+## Dictionary
+
+### Global tokens
+
+<Accordion title="Colors">
+  <TokensWithSubCategories subCategories={designTokens.global.colors} exampleTemplate={
+    (token) => (<div style={styleColorToken(token)}></div>)
+  }/>
+</Accordion>
+
+<Accordion title="Spacing">
+  <TokensTable tokens={designTokens.global.spacing.values} exampleTemplate={
+    ({value}) => (<div style={{backgroundColor: '#0f69af', width: value, height: '80%'}}></div>)
+  }/>
+</Accordion>
+
+<Accordion title="Typography">
+  **Note:** all typography tokens use [Noto Sans Display
+  font](https://fontsource.org/fonts/noto-sans-display)
+  and CJK variants ([Simplified Chinese](https://fontsource.org/fonts/noto-sans-sc),
+  [Japanese](https://fontsource.org/fonts/noto-sans-jp) and
+  [Korean](https://fontsource.org/fonts/noto-sans-kr)). \
+  Font family property is set to `fontFamily: "Noto Sans Display", "Noto Sans SC", "Noto Sans JP",
+  "Noto Sans KR", sans-serif`.
+
+  <TokensWithSubCategories subCategories={designTokens.global.typography} exampleTemplate={
+    ({value}) => (<div style={value}>Sample text</div>)
+  }/>
+</Accordion>
+
+### Alias tokens
+
+<Accordion title="Colors">
+  <TokensWithSubCategories subCategories={designTokens.alias.colors} exampleTemplate={
+    (token) => (<div style={styleColorToken(token)}></div>)
+  }/>
+</Accordion>
+
+<Accordion title="Radius">
+  <TokensTable tokens={designTokens.alias.radius.values} exampleTemplate={
+    ({value}) => (<div
+      style={{
+        backgroundColor: '#0f69af',
+        borderRadius: value,
+        width: '50px',
+        height: '50px',
+        margin: 'auto'
+      }}></div>)
+  }/>
+</Accordion>
+
+<Accordion title="Borders">
+  <TokensTable tokens={designTokens.alias.borders.values} exampleTemplate={
+    ({value}) => (<div
+      style={{
+        borderColor: '#0f69af',
+        borderStyle: 'solid',
+        borderWidth: value,
+        width: '30px',
+        height: '30px',
+        borderRadius: '4px',
+        margin: 'auto',
+        marginTop: '5px',
+        marginBottom: '5px',
+      }}></div>)
+  }/>
+</Accordion>
+
+<Accordion title="Opacity">
+  <TokensTable tokens={designTokens.alias.opacity.values} exampleTemplate={
+    ({value}) => (<div
+      style={{
+        display: 'inline-block',
+        width: '100%',
+        height: '80%',
+        verticalAlign: 'middle',
+        background: 'linear-gradient(45deg, #a9a9ba 25%,transparent 0),linear-gradient(-45deg,#a9a9ba 25%,transparent 0),linear-gradient(45deg,transparent 75%,#a9a9ba 0),linear-gradient(-45deg,transparent 75%,#a9a9ba 0)',
+        backgroundSize: '12px 12px',
+        backgroundPosition: '0 0,0 6px,6px -6px,-6px 0'
+      }}>
+      <div
+        style={{width: '100%', height: '100%', backgroundColor: '#0f69af', opacity: value}}></div>
+    </div>)
+  }/>
+</Accordion>
+
+<Accordion title="Shadows">
+  <TokensTable tokens={designTokens.alias.shadows.values} exampleTemplate={
+    ({value}) => (<div
+        style={{
+          backgroundColor: '#f6f6f8',
+          width: '50px',
+          height: '50px',
+          margin: 'auto',
+          borderRadius: '4px',
+          boxShadow: value
+        }}></div>
+    )
+  }/>
+</Accordion>
+
+## Resources
+
+* <LinkTo kind="Fundamentals/Colors" story="docs">Fundamentals / Colors</LinkTo>
+* <LinkTo kind="Fundamentals/Typography" story="docs">Fundamentals / Typography</LinkTo>
+* [[Confluence] Bio4C Design System / SBB - Design tokens](https://wiki.merckgroup.com/confluence/display/PAD/SBB+-+Design+tokens)
+* [[Figma] Bio4C Design System / Fundamentals / Colors](https://www.figma.com/file/Svp4Vqs9rU5iJViXL3ARfC/%5BDS%5D-Fundamentals-v0.1.0?type=design&node-id=346-18399&mode=design&t=lBSvA8lHo9TsGdBn-0)
+* [[Figma] Bio4C Design System / Fundamentals / Typography](https://www.figma.com/file/Svp4Vqs9rU5iJViXL3ARfC/%5BDS%5D-Fundamentals-v0.1.0?type=design&node-id=825-16136&mode=design&t=jqOuhF1N6LV984M4-0)
+* [[Figma] Bio4C Design System / Fundamentals / Spacing](https://www.figma.com/file/Svp4Vqs9rU5iJViXL3ARfC/%5BDS%5D-Fundamentals-v0.1.0?type=design&node-id=394-46449&mode=design&t=jqOuhF1N6LV984M4-0)
+* [[Figma] Bio4C Design System / Fundamentals / Borders & Radius](https://www.figma.com/file/Svp4Vqs9rU5iJViXL3ARfC/%5BDS%5D-Fundamentals-v0.1.0?type=design&node-id=57-600&mode=design&t=jqOuhF1N6LV984M4-0)
+* [[Figma] Bio4C Design System / Fundamentals / Shadows](https://www.figma.com/file/Svp4Vqs9rU5iJViXL3ARfC/%5BDS%5D-Fundamentals-v0.1.0?type=design&node-id=57-597&mode=design&t=jqOuhF1N6LV984M4-0)
