@@ -15,7 +15,8 @@ const argTypes = groupArgTypes<keyof ToggleProps>(
       'autoFocus',
       'children',
       'className',
-      'style'
+      'style',
+      'preventFocusOnPress'
     ]
   ],
   [

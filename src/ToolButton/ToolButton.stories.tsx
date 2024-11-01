@@ -4,7 +4,19 @@ import { CrossIcon, PlusIcon, ViewGridIcon } from '../icons';
 import { ToolButton, type ToolButtonProps } from './ToolButton';
 
 const argTypes = groupArgTypes<keyof ToolButtonProps>(
-  ['Props', ['icon', 'label', 'variant', 'isDisabled', 'autoFocus', 'className', 'style']],
+  [
+    'Props',
+    [
+      'icon',
+      'label',
+      'variant',
+      'isDisabled',
+      'autoFocus',
+      'className',
+      'style',
+      'preventFocusOnPress'
+    ]
+  ],
   [
     'Events',
     [

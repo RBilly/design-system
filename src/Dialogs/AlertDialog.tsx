@@ -23,14 +23,14 @@ export const AlertDialog = ({
   closeLabel,
   ...props
 }: AlertDialogProps) => {
-  const [isLoading, setLoading] = useState(false);
+  const [isPending, setPending] = useState(false);
 
   const handleClose = (close: () => void) => {
     if (onClose) {
-      setLoading(true);
+      setPending(true);
       Promise.resolve(onClose())
         .then(close)
-        .finally(() => setLoading(false));
+        .finally(() => setPending(false));
     } else {
       close();
     }
@@ -43,7 +43,7 @@ export const AlertDialog = ({
           {title && <Dialog.Title>{title}</Dialog.Title>}
           <Dialog.Content>{children}</Dialog.Content>
           <Dialog.Actions>
-            <Button variant="filled" onPress={() => handleClose(close)} isLoading={isLoading}>
+            <Button variant="filled" onPress={() => handleClose(close)} isPending={isPending}>
               {closeLabel || 'Ok'}
             </Button>
           </Dialog.Actions>

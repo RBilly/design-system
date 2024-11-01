@@ -94,10 +94,10 @@ const DefaultActions = ({
   onAction
 }: Omit<DialogActionsProps, 'children'>) => {
   const { close } = useContext(OverlayTriggerStateContext);
-  const [isCancelLoading, setCancelLoading] = useState(false);
-  const [isActionLoading, setActionLoading] = useState(false);
+  const [isCancelPending, setCancelPending] = useState(false);
+  const [isActionPending, setActionPending] = useState(false);
 
-  const handleButton = (setLoading: typeof setActionLoading, onClick: typeof onAction) => {
+  const handleButton = (setLoading: typeof setActionPending, onClick: typeof onAction) => {
     if (onClick) {
       setLoading(true);
       Promise.resolve(onClick())
@@ -108,16 +108,16 @@ const DefaultActions = ({
     }
   };
 
-  const handleCancel = () => handleButton(setCancelLoading, onCancel);
+  const handleCancel = () => handleButton(setCancelPending, onCancel);
 
-  const handleAction = () => handleButton(setActionLoading, onAction);
+  const handleAction = () => handleButton(setActionPending, onAction);
 
   return (
     <>
       <Button
         variant="text"
         onPress={handleCancel}
-        isLoading={isCancelLoading}
+        isPending={isCancelPending}
         aria-label={cancelLabel}
       >
         {cancelLabel}
@@ -125,7 +125,7 @@ const DefaultActions = ({
       <Button
         variant="filled"
         onPress={handleAction}
-        isLoading={isActionLoading}
+        isPending={isActionPending}
         aria-label={actionLabel}
       >
         {actionLabel}

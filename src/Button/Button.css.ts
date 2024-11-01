@@ -61,7 +61,7 @@ const container = recipe({
         width: '100%'
       }
     },
-    isLoading: {
+    isPending: {
       true: {
         cursor: 'wait'
       }

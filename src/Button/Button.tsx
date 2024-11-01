@@ -13,8 +13,6 @@ export type ButtonProps = Omit<RacButtonProps, keyof CommonProps> &
     iconPosition?: 'before' | 'after';
     /** Whether the button is used on an accent background. */
     onAccent?: boolean;
-    /** Whether the button is in a loading state*/
-    isLoading?: boolean;
     /** The visual style of the button. */
     variant?: 'text' | 'filled' | 'outlined';
     /** Option to fit button width to its parent width */
@@ -32,26 +30,26 @@ export const Button = ({
   onAccent = false,
   variant = 'text',
   isDisabled = false,
-  isLoading = false,
   block = false,
   ...rest
 }: ButtonProps) => {
+  const { isPending } = rest;
   const onBackground = onAccent ? 'accent' : 'default';
   const loadingIcon = <LoadingSpinnerIcon />;
-  const iconElement = isLoading && icon ? loadingIcon : icon;
+  const iconElement = isPending && icon ? loadingIcon : icon;
   const loadingIconWrapper = <span className={loadingWrapper}>{loadingIcon}</span>;
 
   return (
     <RacButton
       {...rest}
-      isDisabled={isDisabled || isLoading}
-      className={classNames(container({ onBackground, variant, block, isLoading }), className)}
+      isDisabled={isDisabled || isPending}
+      className={classNames(container({ onBackground, variant, block, isPending }), className)}
     >
       {iconPosition === 'before' && iconElement}
       {/* if there is no icon displayed, loading icon will replace the text */}
-      {isLoading && !iconElement && loadingIconWrapper}
+      {isPending && !iconElement && loadingIconWrapper}
       {/* in order to preserve button size when displaying loading icon, we only hide the text */}
-      <span className={contentWrapper({ hide: isLoading && !iconElement })}>{children}</span>
+      <span className={contentWrapper({ hide: isPending && !iconElement })}>{children}</span>
       {iconPosition === 'after' && iconElement}
     </RacButton>
   );
