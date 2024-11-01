@@ -17,6 +17,7 @@ export type ToolButtonProps = Omit<
   | 'name'
   | 'value'
   | 'type'
+  | 'isPending'
 > &
   Omit<CommonProps, 'children'> & {
     /** The icon to display. */

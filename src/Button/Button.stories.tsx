@@ -12,7 +12,7 @@ const argTypes = groupArgTypes<keyof ButtonProps>(
       'onAccent',
       'variant',
       'isDisabled',
-      'isLoading',
+      'isPending',
       'form',
       'formAction',
       'formEncType',
@@ -26,7 +26,8 @@ const argTypes = groupArgTypes<keyof ButtonProps>(
       'type',
       'children',
       'className',
-      'style'
+      'style',
+      'preventFocusOnPress'
     ]
   ],
   [
@@ -68,7 +69,7 @@ const argTypes = groupArgTypes<keyof ButtonProps>(
 const controlArgs = [
   'variant',
   'onAccent',
-  'isLoading',
+  'isPending',
   'isDisabled'
 ] as const satisfies ReadonlyArray<keyof ButtonProps>;
 
@@ -80,7 +81,7 @@ const meta = {
   args: {
     variant: 'text',
     onAccent: false,
-    isLoading: false,
+    isPending: false,
     isDisabled: false,
     children: 'Button label'
   }
