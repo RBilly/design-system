@@ -1,6 +1,6 @@
 {
   "private": true,
-  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0",
+  "packageManager": "pnpm@10.6.3+sha512.bb45e34d50a9a76e858a95837301bfb6bd6d35aea2c5d52094fa497a467c43f5c440103ce2511e9e0a2f89c3d6071baac3358fc68ac6fb75e2ceb3d2736065e6",
   "name": "ui-kit",
   "version": "1.0.0-develop",
   "description": "Component library for the Design System",
@@ -91,7 +91,7 @@
   },
   "dependencies": {
     "@fontsource-utils/scss": "^0.2.1",
-    "@fontsource/noto-sans-display": "^5.2.5",
+    "@fontsource/noto-sans-display": "^5.2.6",
     "@fontsource/noto-sans-jp": "^5.2.5",
     "@fontsource/noto-sans-kr": "^5.2.5",
     "@fontsource/noto-sans-sc": "^5.2.5",
