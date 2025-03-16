@@ -1,15 +1,20 @@
-@use 'sass:meta';
-@use '@fontsource/noto-sans-display/scss/mixins' as Noto;
-@use '@fontsource/noto-sans-sc/scss/mixins' as NotoSC;
-@use '@fontsource/noto-sans-jp/scss/mixins' as NotoJP;
-@use '@fontsource/noto-sans-kr/scss/mixins' as NotoKR;
+@use 'pkg:@fontsource-utils/scss' as fontsource with (
+  $weights: (400, 500, 600),
+  $formats: woff2
+);
+@use 'pkg:@fontsource/noto-sans-display/scss' as NotoDisplay;
+@use 'pkg:@fontsource/noto-sans-sc/scss' as NotoSC;
+@use 'pkg:@fontsource/noto-sans-jp/scss' as NotoJP;
+@use 'pkg:@fontsource/noto-sans-kr/scss' as NotoKR;
 
-@mixin faces($font, $subsets) {
-  $faces: meta.get-mixin('faces', $font);
-  @include meta.apply($faces, $weights: (400, 500, 600), $subsets: $subsets, $formats: woff2);
+@mixin faces($font-metadata, $font-subsets) {
+  @include fontsource.faces(
+    $metadata: $font-metadata,
+    $subsets: $font-subsets,
+  );
 }
 
-@include faces(Noto, latin);
-@include faces(NotoSC, chinese-simplified);
-@include faces(NotoJP, japanese);
-@include faces(NotoKR, korean);
+@include faces(NotoDisplay.$metadata, latin);
+@include faces(NotoSC.$metadata, chinese-simplified);
+@include faces(NotoJP.$metadata, japanese);
+@include faces(NotoKR.$metadata, korean);

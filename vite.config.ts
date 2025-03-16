@@ -1,5 +1,6 @@
 /// <reference types="vitest" />
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
+import { NodePackageImporter } from 'sass-embedded';
 import { defineConfig } from 'vite';
 import svgrPlugin from 'vite-plugin-svgr';
 
@@ -19,21 +20,13 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        api: 'modern-compiler'
+        api: 'modern-compiler',
+        importers: [new NodePackageImporter()]
       }
     }
   },
   test: {
     environment: 'jsdom',
     setupFiles: './tests/setup.ts'
-  },
-  resolve: {
-    alias: [
-      {
-        // Workaround to emulate behavior of ~ prefix in Webpack that refers to a relative path in node_modules folder
-        find: /~(.+)/,
-        replacement: `${process.cwd()}/node_modules/$1`
-      }
-    ]
   }
 });
