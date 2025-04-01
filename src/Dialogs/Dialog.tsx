@@ -93,7 +93,7 @@ const DefaultActions = ({
   onCancel,
   onAction
 }: Omit<DialogActionsProps, 'children'>) => {
-  const { close } = useContext(OverlayTriggerStateContext);
+  const state = useContext(OverlayTriggerStateContext);
   const [isCancelPending, setCancelPending] = useState(false);
   const [isActionPending, setActionPending] = useState(false);
 
@@ -101,10 +101,10 @@ const DefaultActions = ({
     if (onClick) {
       setLoading(true);
       Promise.resolve(onClick())
-        .then(close)
+        .then(state?.close)
         .finally(() => setLoading(false));
     } else {
-      close();
+      state?.close();
     }
   };
 

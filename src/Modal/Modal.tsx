@@ -11,13 +11,13 @@ export type ModalProps = Pick<CommonProps, 'children'> & {
 };
 
 const DismissButton = () => {
-  const { close } = useContext(OverlayTriggerStateContext);
+  const state = useContext(OverlayTriggerStateContext);
   return (
     <div className={dismissContainer}>
       <ToolButton
         variant="text"
         icon={<CrossIcon size="medium" />}
-        onPress={close}
+        onPress={state?.close}
         className={dismissButton}
       />
     </div>
