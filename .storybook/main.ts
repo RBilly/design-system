@@ -4,13 +4,16 @@ import type { StorybookConfig } from '@storybook/react-vite';
  * Configure Storybook project's behavior.
  */
 const config: StorybookConfig = {
-  framework: '@storybook/react-vite',
+  framework: {
+    name: '@storybook/react-vite',
+    options: {}
+  },
   stories: [
     '../src/**/*.mdx',
     '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)',
     '../docs/storybook/*.mdx'
   ],
-  addons: ['@storybook/addon-links', '@storybook/addon-essentials', '@storybook/addon-storysource'],
+  addons: ['@storybook/addon-links', '@storybook/addon-docs'],
   core: {
     disableTelemetry: true
   },

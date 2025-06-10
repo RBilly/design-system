@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import type { ReactNode } from 'react';
 import { Button } from '../Button';
 import { groupArgTypes } from '../helpers/storybook/arg-utils';

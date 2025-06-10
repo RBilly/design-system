@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { groupArgTypes } from '../helpers/storybook/arg-utils';
 import { LockIcon, PinIcon, PinnedIcon, StarIcon, StarredIcon } from '../icons';
 import { Toggle, type ToggleProps } from './Toggle';

@@ -1,5 +1,5 @@
-import { useArgs } from '@storybook/preview-api';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { useArgs } from 'storybook/preview-api';
 import { Checkbox } from '../Checkbox';
 import { groupArgTypes } from '../helpers/storybook/arg-utils';
 import { CheckboxGroup, type CheckboxGroupProps } from './CheckboxGroup';

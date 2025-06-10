@@ -1,5 +1,5 @@
-import { useArgs } from '@storybook/preview-api';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { useArgs } from 'storybook/preview-api';
 import { groupArgTypes } from '../helpers/storybook/arg-utils';
 import { Switch, type SwitchProps } from './Switch';
 

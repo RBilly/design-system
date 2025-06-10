@@ -1,4 +1,4 @@
-import type { Preview } from '@storybook/react';
+import type { Preview } from '@storybook/react-vite';
 import { theme } from './custom.theme';
 import './fonts.scss';
 import { withAccentBackground, withCleanSourceCode } from './decorators';
@@ -41,7 +41,8 @@ const preview: Preview = {
     },
     docs: {
       theme,
-      toc: { headingSelector: 'h1, h2, h3', ignoreSelector: '#stories' }
+      toc: { headingSelector: 'h1, h2, h3', ignoreSelector: '#stories' },
+      codePanel: true
     }
   },
   tags: ['autodocs'],

@@ -1,4 +1,4 @@
-import type { Decorator } from '@storybook/react';
+import type { Decorator } from '@storybook/react-vite';
 
 const DEFAULT_BACKGROUND_COLOR = '#fff';
 const ACCENT_BACKGROUND_COLOR = '#0f69af';

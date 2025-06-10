@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { groupArgTypes } from '../helpers/storybook/arg-utils';
 import { CrossIcon, PlusIcon, ViewGridIcon } from '../icons';
 import { ToolButton, type ToolButtonProps } from './ToolButton';
